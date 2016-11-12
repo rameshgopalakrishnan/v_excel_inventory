@@ -14,7 +14,7 @@ class MasterAttribute(models.Model):
         unique_together = (("label", "type"), )
 
     def __str__(self):
-        return "{}. {} / {}".format(self.id, self.label, self.type)
+        return "{}. {}".format(self.id, self.label)
 
 class MasterWorkable(models.Model):
     """e.g. Shirt, T. Shirt, Trousers"""
