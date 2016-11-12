@@ -8,7 +8,7 @@ class MasterAttribute(models.Model):
     TYPE_CHOICES = ((1, 'Material'), )
 
     label = models.TextField()
-    type = models.IntegerField(choices=TYPE_CHOICES)
+    attribute_type = models.IntegerField(choices=TYPE_CHOICES)
 
     class Meta:
         unique_together = (("label", "type"), )
@@ -38,7 +38,7 @@ class MasterService(models.Model):
     tax = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.label)
+        return "{}. {} : {}".format(self.id, self.label, self.workable)
 
 class MasterProduct(models.Model):
     """Cookies"""
