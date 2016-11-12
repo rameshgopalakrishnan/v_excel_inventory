@@ -7,7 +7,10 @@ from service_and_process.models import MasterProcess
 class MasterSection(models.Model):
     CHOICES = ((1, 'Laundry'),
                (2, 'Kitchen'))
-    label = models.IntegerField(CHOICES)
+    label = models.IntegerField(choices=CHOICES)
+
+    def __str__(self):
+        return "{}. {}".format(self.id, self.get_label_display())
 
 
 class InternalUser(models.Model):

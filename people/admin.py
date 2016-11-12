@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import MasterSection
 
-# Register your models here.
+
+@admin.register(MasterSection)
+class MasterSectionAdmin(admin.ModelAdmin): pass
