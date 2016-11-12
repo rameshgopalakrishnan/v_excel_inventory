@@ -1,0 +1,19 @@
+{
+  "name": "v_excel_inventory",
+  "version": "0.0.1",
+  "description": "Inventory Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rameshgopalakrishnan/v_excel_inventory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rameshgopalakrishnan/v_excel_inventory/issues"
+  },
+  "homepage": "https://github.com/rameshgopalakrishnan/v_excel_inventory#readme"
+}
