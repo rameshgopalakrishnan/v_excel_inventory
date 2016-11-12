@@ -1,10 +1,15 @@
+from django.contrib.gis import serializers
 from rest_framework import serializers
 
 from people.models import Customer
 from people.models import InternalUser
 
 class CustomerSerializer(serializers.ModelSerializer):
-    phone_number = serializers.IntegerField(validators=[lambda x: len(str(x)) == 10])
+    phone_number = serializers.IntegerField()
+
+    def validate_phone_number(self, val):
+        if len(str(val)) != 10:
+            raise serializers.ValidationError('The phone number must be 10 digits long')
 
     class Meta:
         model = Customer
