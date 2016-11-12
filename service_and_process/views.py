@@ -6,7 +6,3 @@ from .serializers import MasterWorkableSerializer
 class MasterWorkableViewset(viewsets.ModelViewSet):
     queryset = MasterWorkable.objects.all()
     serializer_class = MasterWorkableSerializer
-
-
-router = routers.DefaultRouter()
-router.register(r'workable', MasterWorkableViewset)

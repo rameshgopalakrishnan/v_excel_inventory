@@ -15,15 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from service_and_process.views import router
+from rest_framework import routers
+
+from service_and_process.views import MasterWorkableViewset
+
+router = routers.DefaultRouter()
+router.register(r'workable', MasterWorkableViewset)
 
 
 api_urls = [
-    url(r'^', router.urls)
+    url(r'^', include(router.urls))
 ]
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include(api_urls))
+    url(r'^api/', include(router.urls))
 ]
