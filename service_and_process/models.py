@@ -13,6 +13,8 @@ class MasterAttribute(models.Model):
     class Meta:
         unique_together = (("label", "type"), )
 
+    def __str__(self):
+        return "{}. {} / {}".format(self.id, self.label, self.type)
 
 class MasterWorkable(models.Model):
     """e.g. Shirt, T. Shirt, Trousers"""
