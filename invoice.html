@@ -245,20 +245,7 @@
 
 					</div>
 	</div>			
-		
-	<div class="form-group col-md-3">
-		<label for="currency">Currency</label>
-		<select name="currency_id" class="form-control required solsoCurrencyEvent">
-			<option value="" selected="">choose</option>
 			
-							<option value="1"> $ </option>
-							<option value="2"> £  </option>
-							<option value="3"> €  </option>
-								
-			
-		</select>
-		
-			</div>		
 	<div class="clearfix"></div>	
 	
 	<div class="table-responsive col-md-12">
@@ -626,33 +613,6 @@
 			return false;
 		});		
 		
-		$( document ).on('click', '.solsoCurrencySettings', function(e) {
-			e.preventDefault();
-			
-			var solsoSelector	= $(this);
-			var id	 			= $(this).attr('data-id');
-			var name 			= $(this).closest('label').find("input[type='radio']").attr('name');
-			var value 			= $(this).closest('label').find("input[type='radio']").val();
-		
-			if ( name == 'position') {
-				goToUrl = "http://solutiisoft.com/inventory-system/currency/position";
-			}
-			
-			if ( name == 'default') {
-				goToUrl = "http://solutiisoft.com/inventory-system/currency/default";
-			}			
-		
-			$.ajax({
-				url: goToUrl,
-				type: 'post',
-				dataType: 'html',
-				data: { itemID: id, itemValue: value  },
-				success:function(data) {
-					$('#tab5').html(data);
-					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
-				}
-			});
-		});		
 
 		$( document ).on('click', '.solsoShowModal', function(){
 			modalTitle = $(this).attr('data-modal-title')
