@@ -4,7 +4,7 @@ from django.db import models
 from service_and_process.models import MasterProcess
 
 
-class MasterUnit(models.Model):
+class MasterSection(models.Model):
     CHOICES = ((1, 'Laundry'),
                (2, 'Kitchen'))
     label = models.IntegerField(CHOICES)
@@ -13,8 +13,8 @@ class MasterUnit(models.Model):
 class InternalUser(models.Model):
     user = models.OneToOneField(User)
     parent = models.ForeignKey('self')
-    unit = models.ForeignKey(MasterUnit)
-    trainee = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
+    section = models.ForeignKey(MasterSection)
+    present_trainer = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
 
 
 class Customer(models.Model):

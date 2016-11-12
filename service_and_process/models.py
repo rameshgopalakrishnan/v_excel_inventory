@@ -51,7 +51,7 @@ class MasterProcess(models.Model):
     """e.g. Billing, Sorting, QC, Washing"""
 
     label = models.TextField()
-    category = models.ForeignKey('people.MasterUnit')
+    section = models.ForeignKey('people.MasterSection')
 
 
 class MappingProductServicesProcess(models.Model):

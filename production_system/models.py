@@ -28,7 +28,7 @@ class Item(models.Model):
     tag_id = models.ForeignKey(MasterTag)
 
 
-class MasterMaterial(models.Model):
+class MasterRawMaterial(models.Model):
 
     CHOICES = ((1, 'piece'),
                (2, 'kg'))
@@ -40,7 +40,7 @@ class MasterMaterial(models.Model):
 class Inventory(models.Model):
     """Raw materials in purchase"""
 
-    material = models.ForeignKey(MasterMaterial)
+    raw_material = models.ForeignKey(MasterRawMaterial)
     quantity = models.IntegerField()
     entry_timestamp = models.DateTimeField(auto_now_add=True)
     update_timestamp = models.DateTimeField()
@@ -49,7 +49,7 @@ class Inventory(models.Model):
 class Purchase(models.Model):
     """Get materials from vendor"""
 
-    material = models.ForeignKey(MasterMaterial)
+    raw_material = models.ForeignKey(MasterRawMaterial)
     vendor = models.TextField()
     entry_timestamp = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=9, decimal_places=2)
