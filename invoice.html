@@ -256,6 +256,7 @@
 				<th class="td-product">Product</th>
 				<th class="td-info">Price</th>
 				<th class="td-info">Quantity</th>
+				<th class="td-info">Total Price</th>
 				<th class="delete-button">Action</th>
 			</tr>	
 		</thead>
@@ -286,6 +287,12 @@
 					<input type="text" name="qty[]" class="form-control required solsoEvent" autocomplete="off">
 				</td>				
 				
+				<td>
+					<h4 class="pull-right">
+						<span class="solsoSubTotal">0.00</span>
+					</h4>	
+				</td>
+
 				<td>
 					<button type="button" class="btn btn-danger disabled removeClone">
 						<i class="fa fa-minus"></i>
@@ -614,6 +621,7 @@
 		});		
 		
 
+
 		$( document ).on('click', '.solsoShowModal', function(){
 			modalTitle = $(this).attr('data-modal-title')
 
@@ -820,6 +828,16 @@
 			
 			itemQty			= parseFloat(qty)  > 0 		? parseFloat(qty).toFixed(2) 		: 0;
 			itemPrice		= parseFloat(price)  > 0 	? parseFloat(price).toFixed(2) 		: 0;
+			
+			subTotal		=  itemQty * itemPrice;
+			
+			$(this).closest('tr').find(".solsoSubTotal").text( subTotal.toFixed(2) );
+			
+			$( '.solsoSubTotal' ).each(function() {
+				total += parseFloat($(this).text());
+			});
+			
+			$( '.solsoTotal' ).text( (subTotal).toFixed(2) );
 			
 		});
 		/* === END INVOICE === */		
