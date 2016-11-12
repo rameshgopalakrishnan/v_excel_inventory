@@ -26,6 +26,8 @@ class MasterWorkable(models.Model):
     category = models.IntegerField(null=True, choices=CATEGORY_CHOICES)
     attribute = models.ForeignKey(MasterAttribute, blank=True, null=True)   # many if required
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.label)
 
 class MasterService(models.Model):
     """e.g. Dry Washing"""
@@ -35,6 +37,8 @@ class MasterService(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     tax = models.DecimalField(max_digits=5, decimal_places=2)
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.label)
 
 class MasterProduct(models.Model):
     """Cookies"""
@@ -48,6 +52,8 @@ class MasterProduct(models.Model):
     batch_size = models.IntegerField()
     unit = models.IntegerField(choices=UNIT_CHOICES)
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.label)
 
 class MasterProcess(models.Model):
     """e.g. Billing, Sorting, QC, Washing"""
@@ -55,6 +61,8 @@ class MasterProcess(models.Model):
     label = models.TextField()
     section = models.ForeignKey('people.MasterSection')
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.label)
 
 class MappingProductServicesProcess(models.Model):
 

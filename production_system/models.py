@@ -13,10 +13,14 @@ class Order(models.Model):
 
     # calculate tax in the invoice
 
+
 class MasterTag(models.Model):
     CHOICE = ((1, 'In Use'),
               (2, 'Free'))
     status = models.IntegerField(CHOICE)
+
+    def __str__(self):
+        return "{}. {}".format(self.id, self.status)
 
 
 class Item(models.Model):
@@ -35,6 +39,9 @@ class MasterRawMaterial(models.Model):
 
     label = models.TextField()
     unit = models.IntegerField(CHOICES)
+
+    def __str__(self):
+        return "{}. {}".format(self.id, self.label)
 
 
 class Inventory(models.Model):
