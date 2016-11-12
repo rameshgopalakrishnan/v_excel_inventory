@@ -22,3 +22,5 @@ class Customer(models.Model):
     address = models.TextField()
     phone_number = models.IntegerField()
     email_id = models.EmailField()
+
+

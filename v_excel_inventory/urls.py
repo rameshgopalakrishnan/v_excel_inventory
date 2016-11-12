@@ -17,14 +17,26 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
-from people.views import CustomerViewset
-from production_system.views import TaskViewset
-from service_and_process.views import MasterWorkableViewset
+from people.views import CustomerViewset, InternalUserViewset
+from production_system.views import TaskViewset, OrderViewset, ItemViewset, InventoryViewset, PurchaseViewset, ProductionViewset
+from service_and_process.views import MasterWorkableViewset, MasterProcessViewset, MasterProductViewset, MasterServiceViewset
+
 
 router = routers.DefaultRouter()
+
 router.register(r'workable', MasterWorkableViewset)
-router.register(r'customer', CustomerViewset)
+router.register(r'customers', CustomerViewset)
+router.register(r'users', InternalUserViewset)
 router.register(r'tasks', TaskViewset)
+router.register(r'services', MasterServiceViewset)
+router.register(r'process', MasterProcessViewset)
+router.register(r'products', MasterProductViewset)
+router.register(r'orders', OrderViewset)
+router.register(r'items', ItemViewset)
+router.register(r'inventory', InventoryViewset)
+router.register(r'purchase', PurchaseViewset)
+router.register(r'production', ProductionViewset)
+
 
 api_urls = [
     url(r'^', include(router.urls))
