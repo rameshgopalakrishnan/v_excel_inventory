@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LaundryConfig(AppConfig):
-    name = 'services'
+    name = 'service_and_process'
