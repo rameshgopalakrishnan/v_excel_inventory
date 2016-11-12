@@ -11,24 +11,24 @@
 	<!-- END META -->
 
 	<!-- FONTS -->
-	<link rel="stylesheet" type="text/css" href="./css/css">
+	<link rel="stylesheet" type="text/css" href="./client_files/css">
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/select2.css">
-	<link rel="stylesheet" type="text/css" href="./css/select2-bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="./css/datepicker.css">	
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap-timepicker.min.css">	
-	<link rel="stylesheet" type="text/css" href="./css/fileinput.min.css">	
-	<link rel="stylesheet" type="text/css" href="./css/jquery.growl.css">
-	<link rel="stylesheet" type="text/css" href="./css/perfect-scrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="./css/design.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/design.css">
 	<!-- END CSS -->	
 	
-	<script async="" src="./js/analytics.js"></script><script>
+	<script async="" src="./client_files/analytics.js.download"></script><script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -52,7 +52,7 @@
 
 		<div class="brand">
 			<a class="navbar-brand" href="#">
-				<span>Inventory System</span>
+				<span>Printing and Documentation</span>
 			</a>
 			
 			<a class="toogle pull-right">
@@ -69,23 +69,17 @@
 	<aside class="sidebar show perfectScrollbar">
 		<div id="solso-sidebar" class="list-group">
 	
-	<a href="invoice.html" class="list-group-item ">
+	<a href="printing_doc_invoice.html" class="list-group-item ">
 		<div class="input-group">
 			<span class="input-group-addon"><i class="fa fa-file-pdf-o"></i></span>
 			<h4 class="list-group-item-heading">Invoices</h4>
-			<p class="list-group-item-text">
-				create  | Edit  | Delete 
-			</p>
 		</div>	  
 	</a>
 	
 	<a href="client.html" class="list-group-item  active ">
 		<div class="input-group">
 			<span class="input-group-addon"><i class="fa fa-users"></i></span>
-			<h4 class="list-group-item-heading">Clients</h4>
-			<p class="list-group-item-text">
-				create  | Edit  | Delete 
-			</p>
+			<h4 class="list-group-item-heading">Printing and Documentation</h4>
 		</div>	  
 	</a>	
 </div>
@@ -98,24 +92,22 @@
 		<div class="col-md-12"></div>		
 		
 	<div class="col-md-12">
-		<h1>
-			<i class="fa fa-list"></i> 
-		Clients
-		</h1>
-
+		
 		<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="clientCreate.html" data-modal-title="Create new client">
-			<i class="fa fa-user-plus"></i> Create new client
+			<i class="fa fa-user-plus"></i> Add new report
 		</button>
 	</div>	
 
 	<div class="col-md-12 top40">
-		<h3>Clients</h3>
+		
 
 		<div id="ajaxTable" class="table-responsive">
 			<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 			<div class="row"><div class="col-sm-12"><table class="table solsoTable dataTable no-footer" data-alert="" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
 	<thead>
-		<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 136px;">Client</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 151px;">Address</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="width: 102px;">Contact</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="E-mail: activate to sort column ascending" style="width: 127px;">E-mail</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 90px;">Phone</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 105px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 110px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th></tr>
+		<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th>
+		<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 136px;">Date</th>
+		<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 151px;">Trainee</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="width: 102px;">Trainer</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="E-mail: activate to sort column ascending" style="width: 127px;">Practice/Production</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 90px;">Activity</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 105px;">Quantity</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 110px;">Unit</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Work Accomplished</th></tr>
 	</thead>
 
 	<tbody>
@@ -125,272 +117,36 @@
 			</td>
 
 			<td>
-				AV Stores, Co.
+				03/Oct/2016 Mon
 			</td>
 
 			<td>
-				EC2 5NT Fauntleroy Circus
+				Akshay Keerthi
 			</td>
 
 			<td>
-				Ashworth Rachel
+				Niraja
 			</td>
 
 			<td>
-				rachel@demo.demo
+				Practice
 			</td>
 
 			<td>
-				+00 (123) 456 7890
+				Spiral & Wiro Binding
 			</td>
 
 			<td>
-									invitation was sent
-							</td>	
+				10
+			</td>	
+			<td>
+				Nos
+			</td>
+			<td>
+				Visiting cards, envelops for mandaveli
+			</td>
 			
-			<td>
-				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/6/reset-password" data-modal-title="Reset password">
-					Reset password
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5" data-modal-title="Show client">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5/edit" data-modal-title="Edit client">
-					<i class="fa fa-edit"></i> Edit
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/6">
-					<i class="fa fa-trash"></i> Delete
-				</button>
-			</td>
-		</tr><tr role="row" class="even">
-			<td class="sorting_1">
-				2
-			</td>
-
-			<td>
-				Toys of Finland, Co.
-			</td>
-
-			<td>
-				Keskuskatu 4532
-			</td>
-
-			<td>
-				Karttunen Matti
-			</td>
-
-			<td>
-				mati@demo.demo
-			</td>
-
-			<td>
-				90-224 8555
-			</td>
-
-			<td>
-									<input type="hidden" name="solsoStatus" value="false">
-					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/4/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
-						
-						Send invitation
-					</button>
-							</td>	
 			
-			<td>
-				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5/reset-password" data-modal-title="Reset password">
-					Reset password
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4" data-modal-title="Show client">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4/edit" data-modal-title="Edit client">
-					<i class="fa fa-edit"></i> Edit
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/5">
-					<i class="fa fa-trash"></i> Delete
-				</button>
-			</td>
-		</tr><tr role="row" class="odd">
-			<td class="sorting_1">
-				3
-			</td>
-
-			<td>
-				Vitachrome Inc.
-			</td>
-
-			<td>
-				2678 Kingston Rd.
-			</td>
-
-			<td>
-				Frick Michael
-			</td>
-
-			<td>
-				michael@demo.demo
-			</td>
-
-			<td>
-				123 456 789
-			</td>
-
-			<td>
-									<input type="hidden" name="solsoStatus" value="false">
-					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/3/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
-						
-						Send invitation
-					</button>
-							</td>	
-			
-			<td>
-				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4/reset-password" data-modal-title="Reset password">
-					Reset password
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3" data-modal-title="Show client">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3/edit" data-modal-title="Edit client">
-					<i class="fa fa-edit"></i> Edit
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/4">
-					<i class="fa fa-trash"></i> Delete
-				</button>
-			</td>
-		</tr><tr role="row" class="even">
-			<td class="sorting_1">
-				4
-			</td>
-
-			<td>
-				American Souvenirs Inc
-			</td>
-
-			<td>
-				149 Spinnaker Dr.
-			</td>
-
-			<td>
-				Franco Keith
-			</td>
-
-			<td>
-				franco@demo.demo
-			</td>
-
-			<td>
-				047 2267 3215
-			</td>
-
-			<td>
-									invitation was sent
-							</td>	
-			
-			<td>
-				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3/reset-password" data-modal-title="Reset password">
-					Reset password
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2" data-modal-title="Show client">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2/edit" data-modal-title="Edit client">
-					<i class="fa fa-edit"></i> Edit
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/3">
-					<i class="fa fa-trash"></i> Delete
-				</button>
-			</td>
-		</tr><tr role="row" class="odd">
-			<td class="sorting_1">
-				5
-			</td>
-
-			<td>
-				Baane Mini Imports
-			</td>
-
-			<td>
-				Erling Skakkes gate 78
-			</td>
-
-			<td>
-				Bergulfsen Jonas
-			</td>
-
-			<td>
-				jonas@demo.demo
-			</td>
-
-			<td>
-				03 9520 4555
-			</td>
-
-			<td>
-									<input type="hidden" name="solsoStatus" value="false">
-					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/1/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
-						
-						Send invitation
-					</button>
-							</td>	
-			
-			<td>
-				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2/reset-password" data-modal-title="Reset password">
-					Reset password
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/1" data-modal-title="Show client">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/1/edit" data-modal-title="Edit client">
-					<i class="fa fa-edit"></i> Edit
-				</button>
-			</td>
-
-			<td>
-				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/2">
-					<i class="fa fa-trash"></i> Delete
-				</button>
-			</td>
 		</tr></tbody>
 </table></div></div>
 </div>	
@@ -402,89 +158,66 @@
 <div class="modal-dialog modal-lg">
 	<div class="modal-content">
 		<div class="modal-header">
-			<h4 class="solsoModalTitle">Create New Client</h4>
+			<h4 class="solsoModalTitle">Create New Printing and Documentation Report</h4>
 		</div>
 		
 		<div class="modal-body">
 			<div class="row solsoShowForm"></div>
-			<form method="POST" action="/save" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
 	
 	<div class="col-md-12">
+		
 		<div class="form-group">
-			<label for="name">
-		Name</label>
-			<input type="text" name="name" class="form-control required" autocomplete="off" value="">
-
-					</div>
-
-		<div class="form-group">
-			<label for="email">E-mail</label>
-			<input type="email" name="email" class="form-control required" autocomplete="off" value="">
+			<label for="date">Date</label>
+			<input type="date" name="email" autocomplete="off" value="">
 			
 					</div>		
 		
 		<div class="form-group">
-			<label for="contact">Contact</label>
-			<input type="text" name="contact" class="form-control required" autocomplete="off" value="">
+			<label for="trainee">Trainee</label>
+			<input type="text" name="trainer" class="form-control required" autocomplete="off" value="">
 			
 					</div>		
+					<div class="form-group">
+			<label for="trainer">Trainer</label>
+			<input type="text" name="trainee" class="form-control required" autocomplete="off" value="">
+			
+					</div>	
 		
 		<div class="form-group">
-			<label for="country">Country</label>
-			<input type="text" name="country" class="form-control" autocomplete="off" value="">
+			<label for="prac_prod"></label>
+			
+			<input type="radio"  name="prac_prod" value="Practice"> Practice</input><br>
+            <input type="radio"  name="prac_prod" value="Production"> Production</input>
+      
 
 					</div>		
 
 		<div class="form-group">
-			<label for="state">State</label>
-			<input type="text" name="state" class="form-control" autocomplete="off" value="">
+			<label for="activity">Activity</label>
+			<input type="text" name="activity" class="form-control" autocomplete="off" value="">
 			
 					</div>			
 		
 		<div class="form-group">
-			<label for="city">City</label>
-			<input type="text" name="city" class="form-control" autocomplete="off" value="">
+			<label for="Quantity">Quantity</label>
+			<input type="number" name="Quantity" min="1" max="10000">
+			<label for="Unit" >Unit</label>
+			<select value="Unit">
+  <option value="nos">nos</option>
+  <option value="kg">kg</option>
+  <option value="gms">gms</option>
+</select>
 			
 					</div>
 
-		<div class="form-group">
-			<label for="zip">Zip code</label>
-			<input type="text" name="zip" class="form-control" autocomplete="off" value="">
-			
-					</div>	
 		
-		<div class="form-group">
-			<label for="address">Address</label>
-			<input type="text" name="address" class="form-control" autocomplete="off" value="">
-			
-					</div>				
+
 		
-		<div class="form-group">
-			<label for="phone">Phone</label>
-			<input type="text" name="phone" class="form-control" autocomplete="off" value="">
-			
-					</div>	
 
 		<div class="form-group">
-			<label for="website">Website</label>
-			<span class="pull-right">http://www.domain.com</span>
-			<input type="url" name="website" class="form-control" autocomplete="off" value="">
-			
-					</div>	
-
-		<div class="form-group">
-			<label for="bank">Bank</label>
-			<input type="text" name="bank" class="form-control" autocomplete="off" value="">
-		</div>	
-
-		<div class="form-group">
-			<label for="bank_account">Bank account</label>
-			<input type="text" name="bank_account" class="form-control" autocomplete="off" value="">
-		</div>				
-
-		<div class="form-group">
-			<label for="description">Description</label>
-			<textarea name="description" class="form-control" rows="7" autocomplete="off"></textarea>
+			<label for="Workaccomplished">Work Accomplished</label>
+			<textarea name="Workaccomplished" class="form-control" rows="7" autocomplete="off"></textarea>
 		</div>	
 	</div>	
 	
@@ -538,17 +271,17 @@
 	</div>
 </main>
 
-<script type="text/javascript" src="./js/jquery.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./client_files/jquery.js.download"></script>
+<script type="text/javascript" src="./client_files/bootstrap.min.js.download"></script>
 
 	<!-- PARSLEY VALIDATION -->
-	<script type="text/javascript" src="./js/parsley.js"></script>
+	<script type="text/javascript" src="./client_files/parsley.js.download"></script>
 	<!-- END PARSLEY VALIDATION -->
 	
 	
 	<!-- DATA TABLES -->
-	<script type="text/javascript" src="./js/datatables.min.js"></script>  
-	<script type="text/javascript" src="./js/datatables-bootstrap.js"></script>    
+	<script type="text/javascript" src="./client_files/datatables.min.js.download"></script>  
+	<script type="text/javascript" src="./client_files/datatables-bootstrap.js.download"></script>    
 	<script>
 		$('.solsoTable').dataTable();
 	</script>
@@ -556,8 +289,8 @@
 
 
 	<!-- CKEDITOR -->
-    <script type="text/javascript" src="./js/ckeditor.js"></script>
-	<script type="text/javascript" src="./js/jquery(2).js"></script>
+    <script type="text/javascript" src="./client_files/ckeditor.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.js(1).download"></script>
 	<script>
 	function solsoShowEditor() {
 		UPLOADCARE_PUBLIC_KEY = "demopublickey";
@@ -576,8 +309,8 @@
 	
 	
 	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="./js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="./client_files/jquery.easing.min.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.easypiechart.min.js.download"></script>
 	<script>
 		$('.chart').easyPieChart({
 			easing: 'easeOutBounce',
@@ -589,7 +322,7 @@
 	<!-- END RENDRO EASY PIE CHART -->
 	
 	<!-- CHART.JS -->
-	<script type="text/javascript" src="./js/chart.min.js"></script>
+	<script type="text/javascript" src="./client_files/chart.min.js.download"></script>
 	<script>
 	
 		
@@ -628,7 +361,7 @@
 	
 	
 	<!-- DATEPICKER -->
-	<script type="text/javascript" src="./js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="./client_files/bootstrap-datepicker.js.download"></script>
 	<script>	
 	function showDatePicker() {
 		var startDate 	= '';
@@ -658,7 +391,7 @@
 	
 	
 	<!-- TIMEPICKER -->
-	<script type="text/javascript" src="./js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="./client_files/bootstrap-timepicker.min.js.download"></script>
 	<script>	
 		$('.timepicker').timepicker();		
 	</script>		
@@ -666,7 +399,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="./js/select2.js"></script>
+	<script type="text/javascript" src="./client_files/select2.js.download"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -674,7 +407,7 @@
 	
 	
 	<!-- BOOTSTRAP FILEINPUT -->
-	<script type="text/javascript" src="./js/fileinput.min.js"></script>
+	<script type="text/javascript" src="./client_files/fileinput.min.js.download"></script>
 	<script>
 	function solsoUpload() {	
 		$(".solsoFileInput").fileinput({
@@ -691,12 +424,12 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="./js/jquery.growl.js"></script>  
+	<script type="text/javascript" src="./client_files/jquery.growl.js.download"></script>  
 	<!-- END GROWL-->		
 	
 	
 	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="./js/perfect-scrollbar.min.js"></script>
+	<script type="text/javascript" src="./client_files/perfect-scrollbar.min.js.download"></script>
 	<script>	
 		menuSidebarHeight = $('#solso-sidebar').height() + 50;
 		sideBarHeight	  = $('.sidebar').height();
@@ -851,10 +584,10 @@
 			var solsoFormAction = solsoSelector.closest('form').attr('action');
 			var solsoFormMethod = solsoSelector.closest('form').attr('method');
 			var solsoFormData	= solsoSelector.closest('form').serialize();	
-			console.log("solsoFormData" + solsoFormData);
+			
 			valid = solsoSelector.closest('form').parsley().validate();
 			
-			/*if (valid) {
+			if (valid) {
 				$.ajax({
 					url: 	solsoFormAction,
 					type: 	solsoFormMethod,
@@ -898,7 +631,7 @@
 						}
 					}
 				});	
-			}*/
+			}
 			
 			return false;
 		});			

@@ -5,16 +5,19 @@ from django.contrib.auth.models import User
 class MasterAttribute(models.Model):
     """Cotton, Linen"""
 
-    TYPE_CHOICES = ((1, 'Material'), )
+    TYPE_CHOICES = ((1, 'Material'),)
 
     label = models.TextField()
     attribute_type = models.IntegerField(choices=TYPE_CHOICES)
 
     class Meta:
+
         unique_together = (("label", "attribute_type"), )
+
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
+
 
 class MasterWorkable(models.Model):
     """e.g. Shirt, T. Shirt, Trousers"""
@@ -24,10 +27,11 @@ class MasterWorkable(models.Model):
 
     label = models.TextField()
     category = models.IntegerField(null=True, choices=CATEGORY_CHOICES)
-    attribute = models.ForeignKey(MasterAttribute, blank=True, null=True)   # many if required
+    attribute = models.ForeignKey(MasterAttribute, blank=True, null=True)  # many if required
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
+
 
 class MasterService(models.Model):
     """e.g. Dry Washing"""
@@ -39,6 +43,7 @@ class MasterService(models.Model):
 
     def __str__(self):
         return "{}. {} : {}".format(self.id, self.label, self.workable)
+
 
 class MasterProduct(models.Model):
     """Cookies"""
@@ -55,6 +60,7 @@ class MasterProduct(models.Model):
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
 
+
 class MasterProcess(models.Model):
     """e.g. Billing, Sorting, QC, Washing"""
 
@@ -64,8 +70,8 @@ class MasterProcess(models.Model):
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
 
-class MappingProductServicesProcess(models.Model):
 
+class MappingProductServicesProcess(models.Model):
     """e.g., Cookies -- bake, Knead, etc """
 
     process = models.ForeignKey(MasterProcess)
