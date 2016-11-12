@@ -28,6 +28,13 @@ DEBUG = True
 
 # Application definition
 
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +47,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'rest_framework',
+    'webpack_loader',
 ]
 
 INSTALLED_APPS += [
@@ -133,6 +141,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'assets'),
     os.path.join(PROJECT_ROOT, 'static'),
 ]
 

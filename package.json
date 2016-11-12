@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/rameshgopalakrishnan/v_excel_inventory/issues"
   },
-  "homepage": "https://github.com/rameshgopalakrishnan/v_excel_inventory#readme"
+  "homepage": "https://github.com/rameshgopalakrishnan/v_excel_inventory#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.7",
+    "react": "^15.3.2",
+    "webpack": "^1.13.3",
+    "webpack-bundle-tracker": "0.0.93"
+  }
 }
