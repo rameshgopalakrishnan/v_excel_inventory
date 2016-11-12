@@ -17,11 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
+from people.views import CustomerViewset
 from service_and_process.views import MasterWorkableViewset
 
 router = routers.DefaultRouter()
 router.register(r'workable', MasterWorkableViewset)
-
+router.register(r'customer', CustomerViewset)
 
 api_urls = [
     url(r'^', include(router.urls))
