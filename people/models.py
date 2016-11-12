@@ -14,6 +14,7 @@ class InternalUser(models.Model):
     user = models.OneToOneField(User)
     parent = models.ForeignKey('self')
     unit = models.ForeignKey(MasterUnit)
+    trainee = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
 
 
 class Customer(models.Model):

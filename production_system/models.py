@@ -85,3 +85,10 @@ class Production(models.Model):
     output_quantity = models.IntegerField(null=True)
     type = models.IntegerField(choices=PRODUCTION_CHOICE)
     # batch
+
+
+class MappingTrainerTraineeTask(models.Model):
+
+    task_id = models.ForeignKey('production_system.Task')
+    trainer = models.ForeignKey(InternalUser)
+    trainee = models.ForeignKey(InternalUser)
