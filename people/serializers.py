@@ -4,6 +4,7 @@ from rest_framework import serializers
 from people.models import Customer
 from people.models import InternalUser
 
+
 class CustomerSerializer(serializers.ModelSerializer):
     phone_number = serializers.IntegerField()
 
@@ -15,9 +16,8 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = '__all__'
 
-class InternalUserSerializer(serializers.ModelSerializer):
 
+class InternalUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = InternalUser
         fields = '__all__'
-
