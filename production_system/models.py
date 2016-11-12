@@ -91,5 +91,5 @@ class Production(models.Model):
 class MappingTrainerTraineeTask(models.Model):
 
     task_id = models.ForeignKey('production_system.Task')
-    trainer = models.ForeignKey(InternalUser)
-    trainee = models.ForeignKey(InternalUser)
+    trainer = models.ForeignKey(InternalUser, related_name='trainer')
+    trainee = models.ForeignKey(InternalUser, related_name='trainee')
