@@ -1,4 +1,18 @@
 # v-excel
-<< Please enter the title of your idea >>
-<< Please enter the description about your idea >>
-<< Please enter your team details below >> 
+Inventory Management System
+ 
+ Inventory management system for the inventory used in the training programs. The system should manage orders with vendors and generate invoices.
+ 
+ Megha 
+ Niraja
+ Abhay
+ Anurag
+ Choppar
+ Gunjan
+ Vishnu G
+ Yogi
+ Karthikeya
+ Amit Mishra
+ Kunal
+ Manik
+ Janani
