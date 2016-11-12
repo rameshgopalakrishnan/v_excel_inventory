@@ -13,17 +13,17 @@
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/select2/select2.css">
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/select2/select2-bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/datepicker/css/datepicker.css">	
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/timepicker/css/bootstrap-timepicker.min.css">	
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/bootstrap-fileinput/css/fileinput.min.css">	
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/growl/jquery.growl.css">
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/vendor/perfect-scrollbar/perfect-scrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/select2.css">
+	<link rel="stylesheet" type="text/css" href="assets/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="assets/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="assets/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="assets/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="assets/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="http://solutiisoft.com/inventory-system/public/css/design.css">
+	<link rel="stylesheet" type="text/css" href="assets/design.css">
 	<!-- END CSS -->	
 	
 	<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
@@ -49,18 +49,29 @@
 		</button>
 
 		<div class="brand">
-			<a class="navbar-brand" href="#">
-				<span>Inventory System</span>
+			<a class="navbar-brand" href="/vexcel">
+				<span>V-Excel</span>
 			</a>
 			
-			<a class="toogle pull-right">
-				<i class="fa fa-chevron-left"></i>
-			</a>
 		</div>		
 	</div>
 
-	
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<p class="navbar-text">
+					Signed in as Admin
+				</p>
+			</li>	
+			<li>
+				<a href="/vexcel/logout">
+					<i class="fa fa-sign-out"></i> logout
+				</a>
+			</li>
+		</ul>
 	</div>
+</div>
 </nav></header>
 
 <main class="body slide">
@@ -643,7 +654,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/select2/select2.js"></script>
+	<script type="text/javascript" src="assets/select2.js"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -668,12 +679,12 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/growl/jquery.growl.js"></script>  
+	<script type="text/javascript" src="assets/jquery.growl.js"></script>  
 	<!-- END GROWL-->		
 	
 	
 	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script type="text/javascript" src="assets/perfect-scrollbar.min.js"></script>
 	<script>	
 		menuSidebarHeight = $('#solso-sidebar').height() + 50;
 		sideBarHeight	  = $('.sidebar').height();
