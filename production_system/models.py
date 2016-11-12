@@ -1,7 +1,7 @@
 from django.db import models
 
-from people.models import Customer
-from service_and_process.models import MasterService, MasterProduct
+from people.models import Customer, InternalUser
+from service_and_process.models import MasterService, MasterProduct, MasterProcess
 
 
 class Order(models.Model):
@@ -20,9 +20,10 @@ class MasterTag(models.Model):
 
 
 class Item(models.Model):
+    """Can either be service or product"""
 
-    service = models.ForeignKey(MasterService)
-    product = models.ForeignKey(MasterProduct)
+    service = models.ForeignKey(MasterService, null=True)
+    product = models.ForeignKey(MasterProduct, null=True)
     order = models.ForeignKey(Order)
     tag_id = models.ForeignKey(MasterTag)
 
@@ -37,6 +38,7 @@ class MasterMaterial(models.Model):
 
 
 class Inventory(models.Model):
+    """Raw materials in purchase"""
 
     material = models.ForeignKey(MasterMaterial)
     quantity = models.IntegerField()
@@ -45,10 +47,11 @@ class Inventory(models.Model):
 
 
 class Purchase(models.Model):
+    """Get materials from vendor"""
 
     material = models.ForeignKey(MasterMaterial)
     vendor = models.TextField()
-    entry_timstamp = models.DateTimeField(auto_now_add=True)
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=9, decimal_places=2)
     quantity = models.IntegerField()
 
@@ -58,3 +61,27 @@ class MappingProductMaterial(models.Model):
     product = models.ForeignKey(MasterProduct)
     material = models.ForeignKey(MasterMaterial)
     quantity = models.IntegerField()
+
+
+class Task(models.Model):
+    """User is ironing"""
+
+    user = models.ForeignKey(InternalUser)
+    process = models.ForeignKey(MasterProcess)
+    item = models.ForeignKey(Item)
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
+    assigned_timestamp = models.DateTimeField()
+    completed_timestamp = models.DateTimeField()
+    is_success = models.BooleanField(default=True)
+
+
+class Production(models.Model):
+    PRODUCTION_CHOICE = ((1, 'Training'),
+                         (2, 'Actual'))
+
+    product = models.ForeignKey(MasterProduct)
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
+    expected_quantity = models.IntegerField()
+    output_quantity = models.IntegerField(null=True)
+    type = models.IntegerField(choices=PRODUCTION_CHOICE)
+    # batch

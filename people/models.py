@@ -21,14 +21,3 @@ class Customer(models.Model):
     address = models.TextField()
     phone_number = models.IntegerField()
     email_id = models.EmailField()
-
-
-class MappingUserProcess(models.Model):
-    """User is ironing"""
-
-    user = models.ForeignKey(User)
-    process = models.ForeignKey(MasterProcess)
-    entry_timestamp = models.DateTimeField(auto_now_add=True)
-    assigned_timestamp = models.DateTimeField()
-    completed_timestamp = models.DateTimeField()
-    is_success = models.BooleanField(default=True)
