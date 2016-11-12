@@ -13,17 +13,17 @@
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/select2.css">
-	<link rel="stylesheet" type="text/css" href="assets/select2-bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="assets/datepicker.css">	
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker.min.css">	
-	<link rel="stylesheet" type="text/css" href="assets/fileinput.min.css">	
-	<link rel="stylesheet" type="text/css" href="assets/jquery.growl.css">
-	<link rel="stylesheet" type="text/css" href="assets/perfect-scrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+	<link rel="stylesheet" type="text/css" href="css/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="css/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="assets/design.css">
+	<link rel="stylesheet" type="text/css" href="css/design.css">
 	<!-- END CSS -->	
 	
 	<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
@@ -49,29 +49,18 @@
 		</button>
 
 		<div class="brand">
-			<a class="navbar-brand" href="/vexcel">
-				<span>V-Excel</span>
+			<a class="navbar-brand" href="#">
+				<span>Inventory System</span>
 			</a>
 			
+			<a class="toogle pull-right">
+				<i class="fa fa-chevron-left"></i>
+			</a>
 		</div>		
 	</div>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<p class="navbar-text">
-					Signed in as Admin
-				</p>
-			</li>	
-			<li>
-				<a href="/vexcel/logout">
-					<i class="fa fa-sign-out"></i> logout
-				</a>
-			</li>
-		</ul>
+	
 	</div>
-</div>
 </nav></header>
 
 <main class="body slide">
@@ -526,17 +515,17 @@
 	</div>
 </main>
 
-<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/js/jquery.js"></script>
-<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 	<!-- PARSLEY VALIDATION -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/parsley/parsley.js"></script>
+	<script type="text/javascript" src="js/parsley.js"></script>
 	<!-- END PARSLEY VALIDATION -->
 	
 	
 	<!-- DATA TABLES -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/datatables/datatables.min.js"></script>  
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/datatables/datatables-bootstrap.js"></script>    
+	<script type="text/javascript" src="js/datatables.min.js"></script>  
+	<script type="text/javascript" src="js/datatables-bootstrap.js"></script>    
 	<script>
 		$('.solsoTable').dataTable();
 	</script>
@@ -544,8 +533,8 @@
 
 
 	<!-- CKEDITOR -->
-    <script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/ckeditor/adapters/jquery.js"></script>
+    <script type="text/javascript" src="js/ckeditor.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<script>
 	function solsoShowEditor() {
 		UPLOADCARE_PUBLIC_KEY = "demopublickey";
@@ -564,8 +553,8 @@
 	
 	
 	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/rendro-easy-pie-chart/dist/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
 	<script>
 		$('.chart').easyPieChart({
 			easing: 'easeOutBounce',
@@ -577,7 +566,7 @@
 	<!-- END RENDRO EASY PIE CHART -->
 	
 	<!-- CHART.JS -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/chart.js/chart.min.js"></script>
+	<script type="text/javascript" src="js/chart.min.js"></script>
 	<script>
 	
 		
@@ -616,7 +605,7 @@
 	
 	
 	<!-- DATEPICKER -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	<script>	
 	function showDatePicker() {
 		var startDate 	= '';
@@ -646,7 +635,7 @@
 	
 	
 	<!-- TIMEPICKER -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
 	<script>	
 		$('.timepicker').timepicker();		
 	</script>		
@@ -654,7 +643,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="assets/select2.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -662,7 +651,7 @@
 	
 	
 	<!-- BOOTSTRAP FILEINPUT -->
-	<script type="text/javascript" src="http://solutiisoft.com/inventory-system/public/vendor/bootstrap-fileinput/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="js/fileinput.min.js"></script>
 	<script>
 	function solsoUpload() {	
 		$(".solsoFileInput").fileinput({
@@ -679,12 +668,12 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="assets/jquery.growl.js"></script>  
+	<script type="text/javascript" src="js/jquery.growl.js"></script>  
 	<!-- END GROWL-->		
 	
 	
 	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="assets/perfect-scrollbar.min.js"></script>
+	<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
 	<script>	
 		menuSidebarHeight = $('#solso-sidebar').height() + 50;
 		sideBarHeight	  = $('.sidebar').height();

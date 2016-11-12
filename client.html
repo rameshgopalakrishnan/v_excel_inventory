@@ -11,24 +11,24 @@
 	<!-- END META -->
 
 	<!-- FONTS -->
-	<link rel="stylesheet" type="text/css" href="./client_files/css">
+	<link rel="stylesheet" type="text/css" href="./css/css">
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./client_files/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./client_files/select2.css">
-	<link rel="stylesheet" type="text/css" href="./client_files/select2-bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="./client_files/datepicker.css">	
-	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap-timepicker.min.css">	
-	<link rel="stylesheet" type="text/css" href="./client_files/fileinput.min.css">	
-	<link rel="stylesheet" type="text/css" href="./client_files/jquery.growl.css">
-	<link rel="stylesheet" type="text/css" href="./client_files/perfect-scrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="./css/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="./css/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="./css/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="./css/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="./client_files/design.css">
+	<link rel="stylesheet" type="text/css" href="./css/design.css">
 	<!-- END CSS -->	
 	
-	<script async="" src="./client_files/analytics.js.download"></script><script>
+	<script async="" src="./js/analytics.js"></script><script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -407,7 +407,7 @@
 		
 		<div class="modal-body">
 			<div class="row solsoShowForm"></div>
-			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+			<form method="POST" action="/save" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
 	
 	<div class="col-md-12">
 		<div class="form-group">
@@ -538,17 +538,17 @@
 	</div>
 </main>
 
-<script type="text/javascript" src="./client_files/jquery.js.download"></script>
-<script type="text/javascript" src="./client_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
 	<!-- PARSLEY VALIDATION -->
-	<script type="text/javascript" src="./client_files/parsley.js.download"></script>
+	<script type="text/javascript" src="./js/parsley.js"></script>
 	<!-- END PARSLEY VALIDATION -->
 	
 	
 	<!-- DATA TABLES -->
-	<script type="text/javascript" src="./client_files/datatables.min.js.download"></script>  
-	<script type="text/javascript" src="./client_files/datatables-bootstrap.js.download"></script>    
+	<script type="text/javascript" src="./js/datatables.min.js"></script>  
+	<script type="text/javascript" src="./js/datatables-bootstrap.js"></script>    
 	<script>
 		$('.solsoTable').dataTable();
 	</script>
@@ -556,8 +556,8 @@
 
 
 	<!-- CKEDITOR -->
-    <script type="text/javascript" src="./client_files/ckeditor.js.download"></script>
-	<script type="text/javascript" src="./client_files/jquery.js(1).download"></script>
+    <script type="text/javascript" src="./js/ckeditor.js"></script>
+	<script type="text/javascript" src="./js/jquery(2).js"></script>
 	<script>
 	function solsoShowEditor() {
 		UPLOADCARE_PUBLIC_KEY = "demopublickey";
@@ -576,8 +576,8 @@
 	
 	
 	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="./client_files/jquery.easing.min.js.download"></script>
-	<script type="text/javascript" src="./client_files/jquery.easypiechart.min.js.download"></script>
+	<script type="text/javascript" src="./js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.easypiechart.min.js"></script>
 	<script>
 		$('.chart').easyPieChart({
 			easing: 'easeOutBounce',
@@ -589,7 +589,7 @@
 	<!-- END RENDRO EASY PIE CHART -->
 	
 	<!-- CHART.JS -->
-	<script type="text/javascript" src="./client_files/chart.min.js.download"></script>
+	<script type="text/javascript" src="./js/chart.min.js"></script>
 	<script>
 	
 		
@@ -628,7 +628,7 @@
 	
 	
 	<!-- DATEPICKER -->
-	<script type="text/javascript" src="./client_files/bootstrap-datepicker.js.download"></script>
+	<script type="text/javascript" src="./js/bootstrap-datepicker.js"></script>
 	<script>	
 	function showDatePicker() {
 		var startDate 	= '';
@@ -658,7 +658,7 @@
 	
 	
 	<!-- TIMEPICKER -->
-	<script type="text/javascript" src="./client_files/bootstrap-timepicker.min.js.download"></script>
+	<script type="text/javascript" src="./js/bootstrap-timepicker.min.js"></script>
 	<script>	
 		$('.timepicker').timepicker();		
 	</script>		
@@ -666,7 +666,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="./client_files/select2.js.download"></script>
+	<script type="text/javascript" src="./js/select2.js"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -674,7 +674,7 @@
 	
 	
 	<!-- BOOTSTRAP FILEINPUT -->
-	<script type="text/javascript" src="./client_files/fileinput.min.js.download"></script>
+	<script type="text/javascript" src="./js/fileinput.min.js"></script>
 	<script>
 	function solsoUpload() {	
 		$(".solsoFileInput").fileinput({
@@ -691,12 +691,12 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="./client_files/jquery.growl.js.download"></script>  
+	<script type="text/javascript" src="./js/jquery.growl.js"></script>  
 	<!-- END GROWL-->		
 	
 	
 	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="./client_files/perfect-scrollbar.min.js.download"></script>
+	<script type="text/javascript" src="./js/perfect-scrollbar.min.js"></script>
 	<script>	
 		menuSidebarHeight = $('#solso-sidebar').height() + 50;
 		sideBarHeight	  = $('.sidebar').height();
@@ -851,10 +851,10 @@
 			var solsoFormAction = solsoSelector.closest('form').attr('action');
 			var solsoFormMethod = solsoSelector.closest('form').attr('method');
 			var solsoFormData	= solsoSelector.closest('form').serialize();	
-			
+			console.log("solsoFormData" + solsoFormData);
 			valid = solsoSelector.closest('form').parsley().validate();
 			
-			if (valid) {
+			/*if (valid) {
 				$.ajax({
 					url: 	solsoFormAction,
 					type: 	solsoFormMethod,
@@ -898,7 +898,7 @@
 						}
 					}
 				});	
-			}
+			}*/
 			
 			return false;
 		});			
