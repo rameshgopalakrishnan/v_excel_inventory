@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://solutiisoft.com/inventory-system/client -->
+<html lang="en" class="gr__solutiisoft_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Inventory System</title>
+	
+
+	<!-- META -->
+	<meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- END META -->
+
+	<!-- FONTS -->
+	<link rel="stylesheet" type="text/css" href="./client_files/css">
+	<!-- END FONTS -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/perfect-scrollbar.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="./client_files/design.css">
+	<!-- END CSS -->	
+	
+	<script async="" src="./client_files/analytics.js.download"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-44073820-17', 'auto');
+	  ga('send', 'pageview');
+
+	</script>	
+<style>.cke{visibility:hidden;}</style></head>
+<body data-gr-c-s-loaded="true">
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+		<div class="brand">
+			<a class="navbar-brand" href="#">
+				<span>Inventory System</span>
+			</a>
+			
+			<a class="toogle pull-right">
+				<i class="fa fa-chevron-left"></i>
+			</a>
+		</div>		
+	</div>
+
+	
+	</div>
+</nav></header>
+
+<main class="body slide">
+	<aside class="sidebar show perfectScrollbar">
+		<div id="solso-sidebar" class="list-group">
+	
+	<a href="invoice.html" class="list-group-item ">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-file-pdf-o"></i></span>
+			<h4 class="list-group-item-heading">Invoices</h4>
+			<p class="list-group-item-text">
+				create  | Edit  | Delete 
+			</p>
+		</div>	  
+	</a>
+	
+	<a href="client.html" class="list-group-item  active ">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-users"></i></span>
+			<h4 class="list-group-item-heading">Clients</h4>
+			<p class="list-group-item-text">
+				create  | Edit  | Delete 
+			</p>
+		</div>	  
+	</a>	
+</div>
+	</aside>
+	
+	<div class="container-fluid solso-content">
+	<div class="row">
+		
+		
+		<div class="col-md-12"></div>		
+		
+	<div class="col-md-12">
+		<h1>
+			<i class="fa fa-list"></i> 
+		Clients
+		</h1>
+
+		<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="clientCreate.html" data-modal-title="Create new client">
+			<i class="fa fa-user-plus"></i> Create new client
+		</button>
+	</div>	
+
+	<div class="col-md-12 top40">
+		<h3>Clients</h3>
+
+		<div id="ajaxTable" class="table-responsive">
+			<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+			<div class="row"><div class="col-sm-12"><table class="table solsoTable dataTable no-footer" data-alert="" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+	<thead>
+		<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 136px;">Client</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 151px;">Address</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="width: 102px;">Contact</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="E-mail: activate to sort column ascending" style="width: 127px;">E-mail</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 90px;">Phone</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 105px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 110px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th></tr>
+	</thead>
+
+	<tbody>
+	<tr role="row" class="odd">
+			<td class="sorting_1">
+				1
+			</td>
+
+			<td>
+				AV Stores, Co.
+			</td>
+
+			<td>
+				EC2 5NT Fauntleroy Circus
+			</td>
+
+			<td>
+				Ashworth Rachel
+			</td>
+
+			<td>
+				rachel@demo.demo
+			</td>
+
+			<td>
+				+00 (123) 456 7890
+			</td>
+
+			<td>
+									invitation was sent
+							</td>	
+			
+			<td>
+				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/6/reset-password" data-modal-title="Reset password">
+					Reset password
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5" data-modal-title="Show client">
+					<i class="fa fa-eye"></i> Show
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5/edit" data-modal-title="Edit client">
+					<i class="fa fa-edit"></i> Edit
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/6">
+					<i class="fa fa-trash"></i> Delete
+				</button>
+			</td>
+		</tr><tr role="row" class="even">
+			<td class="sorting_1">
+				2
+			</td>
+
+			<td>
+				Toys of Finland, Co.
+			</td>
+
+			<td>
+				Keskuskatu 4532
+			</td>
+
+			<td>
+				Karttunen Matti
+			</td>
+
+			<td>
+				mati@demo.demo
+			</td>
+
+			<td>
+				90-224 8555
+			</td>
+
+			<td>
+									<input type="hidden" name="solsoStatus" value="false">
+					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/4/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
+						
+						Send invitation
+					</button>
+							</td>	
+			
+			<td>
+				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/5/reset-password" data-modal-title="Reset password">
+					Reset password
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4" data-modal-title="Show client">
+					<i class="fa fa-eye"></i> Show
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4/edit" data-modal-title="Edit client">
+					<i class="fa fa-edit"></i> Edit
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/5">
+					<i class="fa fa-trash"></i> Delete
+				</button>
+			</td>
+		</tr><tr role="row" class="odd">
+			<td class="sorting_1">
+				3
+			</td>
+
+			<td>
+				Vitachrome Inc.
+			</td>
+
+			<td>
+				2678 Kingston Rd.
+			</td>
+
+			<td>
+				Frick Michael
+			</td>
+
+			<td>
+				michael@demo.demo
+			</td>
+
+			<td>
+				123 456 789
+			</td>
+
+			<td>
+									<input type="hidden" name="solsoStatus" value="false">
+					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/3/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
+						
+						Send invitation
+					</button>
+							</td>	
+			
+			<td>
+				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/4/reset-password" data-modal-title="Reset password">
+					Reset password
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3" data-modal-title="Show client">
+					<i class="fa fa-eye"></i> Show
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3/edit" data-modal-title="Edit client">
+					<i class="fa fa-edit"></i> Edit
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/4">
+					<i class="fa fa-trash"></i> Delete
+				</button>
+			</td>
+		</tr><tr role="row" class="even">
+			<td class="sorting_1">
+				4
+			</td>
+
+			<td>
+				American Souvenirs Inc
+			</td>
+
+			<td>
+				149 Spinnaker Dr.
+			</td>
+
+			<td>
+				Franco Keith
+			</td>
+
+			<td>
+				franco@demo.demo
+			</td>
+
+			<td>
+				047 2267 3215
+			</td>
+
+			<td>
+									invitation was sent
+							</td>	
+			
+			<td>
+				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/3/reset-password" data-modal-title="Reset password">
+					Reset password
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2" data-modal-title="Show client">
+					<i class="fa fa-eye"></i> Show
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2/edit" data-modal-title="Edit client">
+					<i class="fa fa-edit"></i> Edit
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/3">
+					<i class="fa fa-trash"></i> Delete
+				</button>
+			</td>
+		</tr><tr role="row" class="odd">
+			<td class="sorting_1">
+				5
+			</td>
+
+			<td>
+				Baane Mini Imports
+			</td>
+
+			<td>
+				Erling Skakkes gate 78
+			</td>
+
+			<td>
+				Bergulfsen Jonas
+			</td>
+
+			<td>
+				jonas@demo.demo
+			</td>
+
+			<td>
+				03 9520 4555
+			</td>
+
+			<td>
+									<input type="hidden" name="solsoStatus" value="false">
+					<button type="button" class="btn solso-pdf solsoAjax" data-href="http://solutiisoft.com/inventory-system/client/1/send-invitation" data-method="get" data-message-title="Update notification" data-message-error="An error occurred" data-message-success="E-mail was sent to client" data-message-warning="An error occurred">
+						
+						Send invitation
+					</button>
+							</td>	
+			
+			<td>
+				<button type="button" class="btn solso-email solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/2/reset-password" data-modal-title="Reset password">
+					Reset password
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/1" data-modal-title="Show client">
+					<i class="fa fa-eye"></i> Show
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/client/1/edit" data-modal-title="Edit client">
+					<i class="fa fa-edit"></i> Edit
+				</button>
+			</td>
+
+			<td>
+				<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/client/2">
+					<i class="fa fa-trash"></i> Delete
+				</button>
+			</td>
+		</tr></tbody>
+</table></div></div>
+</div>	
+		</div>	
+	</div>
+	
+		
+		<div class="modal fade" id="solsoCrudModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="solsoModalTitle">Create New Client</h4>
+		</div>
+		
+		<div class="modal-body">
+			<div class="row solsoShowForm"></div>
+			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+	
+	<div class="col-md-12">
+		<div class="form-group">
+			<label for="name">
+		Name</label>
+			<input type="text" name="name" class="form-control required" autocomplete="off" value="">
+
+					</div>
+
+		<div class="form-group">
+			<label for="email">E-mail</label>
+			<input type="email" name="email" class="form-control required" autocomplete="off" value="">
+			
+					</div>		
+		
+		<div class="form-group">
+			<label for="contact">Contact</label>
+			<input type="text" name="contact" class="form-control required" autocomplete="off" value="">
+			
+					</div>		
+		
+		<div class="form-group">
+			<label for="country">Country</label>
+			<input type="text" name="country" class="form-control" autocomplete="off" value="">
+
+					</div>		
+
+		<div class="form-group">
+			<label for="state">State</label>
+			<input type="text" name="state" class="form-control" autocomplete="off" value="">
+			
+					</div>			
+		
+		<div class="form-group">
+			<label for="city">City</label>
+			<input type="text" name="city" class="form-control" autocomplete="off" value="">
+			
+					</div>
+
+		<div class="form-group">
+			<label for="zip">Zip code</label>
+			<input type="text" name="zip" class="form-control" autocomplete="off" value="">
+			
+					</div>	
+		
+		<div class="form-group">
+			<label for="address">Address</label>
+			<input type="text" name="address" class="form-control" autocomplete="off" value="">
+			
+					</div>				
+		
+		<div class="form-group">
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" class="form-control" autocomplete="off" value="">
+			
+					</div>	
+
+		<div class="form-group">
+			<label for="website">Website</label>
+			<span class="pull-right">http://www.domain.com</span>
+			<input type="url" name="website" class="form-control" autocomplete="off" value="">
+			
+					</div>	
+
+		<div class="form-group">
+			<label for="bank">Bank</label>
+			<input type="text" name="bank" class="form-control" autocomplete="off" value="">
+		</div>	
+
+		<div class="form-group">
+			<label for="bank_account">Bank account</label>
+			<input type="text" name="bank_account" class="form-control" autocomplete="off" value="">
+		</div>				
+
+		<div class="form-group">
+			<label for="description">Description</label>
+			<textarea name="description" class="form-control" rows="7" autocomplete="off"></textarea>
+		</div>	
+	</div>	
+	
+	<div class="form-group col-md-12">
+		<button type="button" class="btn btn-success solsoSave" data-message-title="Create notification" data-message-error="Validation error messages" data-message-success="Data was saved">
+			<i class="fa fa-save"></i> Save
+		</button>
+	</div>
+	
+</form>
+		</div>
+		
+		<div class="modal-footer">
+			<button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+</div>
+</div>
+
+		<div class="modal fade" id="solsoDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Delete dialog</h4>
+        </div>
+
+        <div class="modal-body">
+            <p>You are about to delete this item this procedure is irreversible !</p>
+            <p>Do you want to proceed ?</p><p>
+        </p></div>
+
+        <div class="modal-footer">
+
+			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" id="solsoFormDelete"><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+				
+				<button type="button" class="btn btn-primary" data-dismiss="modal">
+					NO
+				</button>
+				
+				<button class="btn btn-danger solsoDelete" data-message-title="Delete notification" data-message-success="Data was deleted">
+					YES
+				</button>
+					
+			</form>									
+
+        </div>
+    </div>
+</div>
+</div>		
+	</div>
+	</div>
+</main>
+
+<script type="text/javascript" src="./client_files/jquery.js.download"></script>
+<script type="text/javascript" src="./client_files/bootstrap.min.js.download"></script>
+
+	<!-- PARSLEY VALIDATION -->
+	<script type="text/javascript" src="./client_files/parsley.js.download"></script>
+	<!-- END PARSLEY VALIDATION -->
+	
+	
+	<!-- DATA TABLES -->
+	<script type="text/javascript" src="./client_files/datatables.min.js.download"></script>  
+	<script type="text/javascript" src="./client_files/datatables-bootstrap.js.download"></script>    
+	<script>
+		$('.solsoTable').dataTable();
+	</script>
+	<!-- END DATA TABLES -->	
+
+
+	<!-- CKEDITOR -->
+    <script type="text/javascript" src="./client_files/ckeditor.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.js(1).download"></script>
+	<script>
+	function solsoShowEditor() {
+		UPLOADCARE_PUBLIC_KEY = "demopublickey";
+
+        if ($('.solsoEditor').length) {
+            $( 'textarea.solsoEditor' ).ckeditor({
+                uiColor: '#9AB8F3',
+                height: 300,
+             });
+        }
+	}
+	
+	solsoShowEditor();
+	</script>	
+	<!-- CKEDITOR -->
+	
+	
+	<!-- RENDRO EASY PIE CHART -->
+	<script type="text/javascript" src="./client_files/jquery.easing.min.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.easypiechart.min.js.download"></script>
+	<script>
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+	</script>	
+	<!-- END RENDRO EASY PIE CHART -->
+	
+	<!-- CHART.JS -->
+	<script type="text/javascript" src="./client_files/chart.min.js.download"></script>
+	<script>
+	
+		
+	
+	window.onload = function(){
+		if ($('#reportClientsProducts').length) {
+			var ctx = document.getElementById("reportClientsProducts").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartClientsProducts, {
+				responsive: true
+			});
+		}
+		
+		if ($('#reporEstimatesInvoices').length) {
+			var ctx = document.getElementById("reporEstimatesInvoices").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices, {
+				responsive: true
+			});		
+		}
+		
+		if ($('#reportClientsProducts2').length) {
+			var ctx = document.getElementById("reportClientsProducts2").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartClientsProducts2, {
+				responsive: true
+			});
+		}
+		
+		if ($('#reporEstimatesInvoices2').length) {
+			var ctx = document.getElementById("reporEstimatesInvoices2").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices2, {
+				responsive: true
+			});		
+		}			
+	}	
+	</script>
+	<!-- END CHART.JS -->
+	
+	
+	<!-- DATEPICKER -->
+	<script type="text/javascript" src="./client_files/bootstrap-datepicker.js.download"></script>
+	<script>	
+	function showDatePicker() {
+		var startDate 	= '';
+		var endDate 	= '';
+		
+		$('#dp1').datepicker()
+			.on('changeDate', function(ev){
+				startDate = new Date(ev.date);
+				$('#dp1').datepicker('hide');
+			});
+			
+		$('#dp2').datepicker()
+			.on('changeDate', function(ev){
+				if (ev.date.valueOf() < startDate.valueOf()){
+					$.growl.error({ title: "Error message", message: "The end date can not be less then the start date !"});
+					$(this).val('');
+				} else {
+					endDate = new Date(ev.date);
+				}
+				$('#dp2').datepicker('hide');
+			});		
+	}	
+	
+	showDatePicker();
+	</script>		
+	<!-- END DATEPICKER -->
+	
+	
+	<!-- TIMEPICKER -->
+	<script type="text/javascript" src="./client_files/bootstrap-timepicker.min.js.download"></script>
+	<script>	
+		$('.timepicker').timepicker();		
+	</script>		
+	<!-- END TIMEPICKER -->
+	
+
+	<!-- SELECT 2 -->
+	<script type="text/javascript" src="./client_files/select2.js.download"></script>
+	<script>	
+		$('.select2').select2();		
+	</script>	
+	<!-- END SELECT 2 -->
+	
+	
+	<!-- BOOTSTRAP FILEINPUT -->
+	<script type="text/javascript" src="./client_files/fileinput.min.js.download"></script>
+	<script>
+	function solsoUpload() {	
+		$(".solsoFileInput").fileinput({
+			allowedFileExtensions: ['jpg', 'jpeg', 'gif', 'png', 'bmp'],
+			allowedFileTypes: ['image', 'video', 'flash'],
+			removeClass: 'btn btn-danger',
+			uploadClass: 'btn btn-success',
+		});
+	}
+	
+	solsoUpload();
+	</script>		
+	<!-- END BOOTSTRAP FILEINPUT -->
+	
+
+	<!-- GROWL -->
+	<script type="text/javascript" src="./client_files/jquery.growl.js.download"></script>  
+	<!-- END GROWL-->		
+	
+	
+	<!-- PERFECT-SCROLLBAR -->	
+	<script type="text/javascript" src="./client_files/perfect-scrollbar.min.js.download"></script>
+	<script>	
+		menuSidebarHeight = $('#solso-sidebar').height() + 50;
+		sideBarHeight	  = $('.sidebar').height();
+
+		if ( menuSidebarHeight >= sideBarHeight )	{
+			$('.perfectScrollbar').perfectScrollbar();
+		}	
+	</script>	
+	<!-- END PERFECT-SCROLLBAR -->		
+	
+	
+	<!-- === SOLUTII SOFT === -->
+	<script>
+		/* === SETTINGS && MODALS && UPLOAD === */
+		$(document).on("submit", ".solsoUploadForm", function () {	
+			$.ajax({
+				url: "http://solutiisoft.com/inventory-system/upload/upload-image",
+				type: 'POST',
+				data: new FormData( this ),
+				processData: false,
+				contentType: false,
+				success:function(data) {
+					$('#tab2').html(data);
+					solsoUpload();
+					
+					var getError = $(data).find("[name='solsoStatus']").val();
+					if ( getError == '1' ) {
+						$.growl.notice({ title: 'Update notification', message: 'Data was saved' });
+					} else {
+						$.growl.notice({ title: 'Update notification', message: 'Validation error messages' });
+					}
+				}
+			});
+			
+			return false;
+		});		
+		
+		$( document ).on('click', '.solsoAjax', function(){
+			
+			var solsoSelector	= $(this);
+			var solsoFormData 	= $(solsoSelector).closest('form').serialize();
+			var	solsoFormAction	= solsoSelector.attr('data-href');
+			var solsoFormMethod	= solsoSelector.attr('data-method');
+			var returnTO		= solsoSelector.attr('data-return');
+
+			valid = true;
+			
+			if (solsoSelector.closest('form').length > 0) {
+				valid = solsoSelector.closest('form').parsley().validate();
+			}
+
+			if (valid) {
+				$.ajax({
+					url: 	solsoFormAction,
+					type: 	solsoFormMethod,
+					data: 	solsoFormData,
+					dataType: 'html',
+					success:function(data) {
+						if (data == 0) {
+							$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+						} else {			
+							$('#' + returnTO).html(data);
+							
+							if ( $(data).find('.table').attr('data-alert') ) {
+								var getError = $(data).find('.table').attr('data-alert');
+							} else if ( $(data).closest('table').attr('data-alert') ) {
+								var getError = $(data).closest('table').attr('data-alert');	
+							} else {	
+								var getError = $(data).find("[name='solsoStatus']").val();
+							}
+							
+							if ( getError == '1' ) {
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else if ( getError == '2' ) {	
+								$.growl.warning({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-warning') });
+							} else {
+								$.growl.error({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-error') });
+							}
+							
+							if ( $(data).closest('table').attr('data-alert') ) {
+								$('#ajaxTable').html(data);
+								$('.solsoTable').dataTable();
+							}		
+
+							solsoUpload();	
+							solsoShowEditor();
+						}
+					}
+				});			
+			}
+			
+			return false;
+		});		
+		
+		$( document ).on('click', '.solsoCurrencySettings', function(e) {
+			e.preventDefault();
+			
+			var solsoSelector	= $(this);
+			var id	 			= $(this).attr('data-id');
+			var name 			= $(this).closest('label').find("input[type='radio']").attr('name');
+			var value 			= $(this).closest('label').find("input[type='radio']").val();
+		
+			if ( name == 'position') {
+				goToUrl = "http://solutiisoft.com/inventory-system/currency/position";
+			}
+			
+			if ( name == 'default') {
+				goToUrl = "http://solutiisoft.com/inventory-system/currency/default";
+			}			
+		
+			$.ajax({
+				url: goToUrl,
+				type: 'post',
+				dataType: 'html',
+				data: { itemID: id, itemValue: value  },
+				success:function(data) {
+					$('#tab5').html(data);
+					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+				}
+			});
+		});		
+
+		$( document ).on('click', '.solsoShowModal', function(){
+			modalTitle = $(this).attr('data-modal-title')
+
+			$.ajax({
+				url: $(this).attr('data-href'),
+				dataType: 'html',
+				success:function(data) {
+					if (data == 0) {
+						$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+					} else {					
+						$('.solsoModalTitle').text(modalTitle.toString());
+						$('.solsoShowForm').html(data);
+						showDatePicker();
+						solsoShowEditor();
+						
+						if ($('.select2').length) {
+							$('.select2').select2({
+								closeOnSelect:false
+							});
+						}
+					}
+				}
+			});		
+		});
+		
+		$( document ).on('click', '.solsoSave', function(e){
+			e.preventDefault();
+
+			var solsoSelector	= $(this);
+			var solsoFormAction = solsoSelector.closest('form').attr('action');
+			var solsoFormMethod = solsoSelector.closest('form').attr('method');
+			var solsoFormData	= solsoSelector.closest('form').serialize();	
+			
+			valid = solsoSelector.closest('form').parsley().validate();
+			
+			if (valid) {
+				$.ajax({
+					url: 	solsoFormAction,
+					type: 	solsoFormMethod,
+					data: 	solsoFormData,
+					cache: 	false,
+					dataType: 'html',
+					success:function(data) {
+						if (data == 0) {
+							$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+						} else {
+
+							if ( $(data).closest('table').attr('data-alert') ) {
+								var getError = $(data).closest('table').attr('data-alert');
+							} else if ( $(data).find('.table').attr('data-alert') ) {
+								var getError = $(data).find('.table').attr('data-alert');
+							} else if ( $(data).closest('form').attr('data-alert') ){	
+								var getError = $(data).closest('form').attr('data-alert');
+							} else if ( $(data).closest('form').attr('data-alert') ) {	
+								var getError = $(data).find('form').attr('data-alert');
+							} else {	
+								var getError = 0;
+							}						
+
+							if ( getError == '1' ) {
+								$('#solsoCrudModal').modal('hide');
+								$('#ajaxTable').html(data);
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else if ( getError == '2' )  {	
+								$.growl.warning({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-warning') });
+							} else if ( getError == '4' )  {	
+								$('.solsoShowForm').html(data);
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else {
+								$('.solsoShowForm').html(data);
+								$.growl.error({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-error') });
+							}
+							
+							$('.solsoTable').dataTable();
+							showDatePicker();
+							// $('.select2').select2();
+						}
+					}
+				});	
+			}
+			
+			return false;
+		});			
+		
+		$( document ).on('click', '.solsoConfirm', function(){
+			$("#solsoFormDelete").prop('action', $(this).attr('data-href'));
+			
+			if ($(this).attr('data-return')) {
+				$("#solsoFormDelete").attr('data-return', $(this).attr('data-return'));;
+			}
+		});
+		
+		$( document ).on('click', '.solsoDelete', function(e){
+			e.preventDefault();
+			
+			var solsoSelector	= $(this);
+			var solsoFormAction = $('#solsoFormDelete').attr('action');
+			
+			if ($('#solsoFormDelete').attr('data-return')) {
+				var returnTO = $('#solsoFormDelete').attr('data-return');
+			}	
+			
+			$.ajax({
+				url: 	solsoFormAction,
+				type: 	'delete',
+				cache: 	false,
+				dataType: 'html',
+				success:function(data) {
+					$('#solsoDeleteModal').modal('hide');
+					
+					if (returnTO) {
+						$('#' + returnTO).html(data);
+					} else {	
+						$('#ajaxTable').html(data);
+						$('.solsoTable').dataTable();
+						dataRefresh = solsoFormAction.split('/');
+					}
+					
+					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+				}
+			});	
+			
+			return false;
+		});				
+		
+		$('#solsoCrudModal').on('hidden.bs.modal', function () {
+			$.ajax({
+				url: 	'client',
+				type: 	'get',
+				cache: 	false,
+				dataType: 'html',
+				success:function(data) {
+					$('#ajaxTable').html(data);
+					$('.solsoTable').dataTable();
+				}
+			});				
+		});
+		/* === END SETTINGS && MODALS && UPLOAD === */
+
+		
+		/* === CLONE ROW === */
+		$(document).on('click', '#createClone', function(e) {
+			$( '.solsoSelect2.solsoCloneSelect2').select2('destroy');
+			
+			$( '.solsoParent' )
+				.append( '<tr>' + $( 'tr.solsoChild' ).html()  + '</tr>' );
+		
+			$( '.crt' ).each(function( index ) {
+				$( this ).text(index+1);
+			});			
+			
+			
+			$("[name='products[]']").last().val('');
+			$("[name='qty[]']").last().val('');
+			$("[name='price[]']").last().val('');
+			$("[name='taxes[]']").last().val('');
+			$("[name='discount[]']").last().val('');
+			
+			$( ".solsoSubTotal" ).last().text('0.00');
+			$( '.solsoCloneSelect2' ).select2();
+
+			return false;
+		});
+		
+		$( document ).on('click', '.removeClone', function() {
+			
+			if ( $('.removeClone').size() > 1 ) {
+				$(this).parents().eq(1).remove();
+			} else {
+				$.growl.error({ title: 'ACCESS DENIEND', message: "YOU CAN'T DELETE ALL PRODUCTS !!!" });
+			}
+			
+			$( '.crt' ).each(function( index ) {
+				$( this ).text(index+1);
+			});
+			
+			return false;
+		});
+		/* === END CLONE ROW === */	
+		
+		/* === INVOICE === */
+		$( document ).on('change', '.solsoCloneSelect2', function() {
+			inputPrice = $(this).closest('tr').find("[name='price[]']");
+			
+			$.ajax({
+				url: "http://solutiisoft.com/inventory-system/get-product-price",
+				type: 'post',
+				dataType: 'json',
+				data: { product: $(this).val() },
+				success:function(price) {
+					inputPrice.val(price);
+				}
+			});
+		});		
+		
+		$( document ).on('change', '.solsoCurrencyEvent', function() {
+			if ( $(this).val() != '') {
+				$( '.solsoCurrency' ).text( $( "[name='currency'] option[value='" + $(this).val() + "']").text() );
+			}
+		});	
+		
+		$( document ).on("click change paste keyup", ".solsoEvent", function() {
+			var qty			= $(this).closest('tr').find("[name='qty[]']").val();
+			var price		= $(this).closest('tr').find("[name='price[]']").val();
+			var tax			= $(this).closest('tr').find("[name='taxes[]']").val();
+			var discount	= $(this).closest('tr').find("[name='discount[]']").val();	
+			var type		= $(this).closest('tr').find("[name='discountType[]']").val();	
+			var totalDisc	= $(this).closest('tr').find("[name='invoiceDiscount']").val();	
+			var invoiceType	= $(this).closest('tr').find("[name='invoiceDiscountType']").val();	
+			var subTotal	= 0;
+			var total		= 0;
+			
+			itemQty			= parseFloat(qty)  > 0 		? parseFloat(qty).toFixed(2) 		: 0;
+			itemPrice		= parseFloat(price)  > 0 	? parseFloat(price).toFixed(2) 		: 0;
+			itemTax			= parseFloat(tax) > 0 		? parseFloat(tax).toFixed(2) 		: 0;
+			itemDiscount	= parseFloat(discount) > 0	? parseFloat(discount).toFixed(2)	: 0;
+			invoiceDiscount	= parseFloat(totalDisc) > 0	? parseFloat(totalDisc).toFixed(2)	: 0;
+			
+			solsoValue 			= itemQty * itemPrice;
+			solsoTax			= solsoValue * (itemTax / 100);
+			solsoPrice			= solsoValue + solsoTax;
+			solsoDiscount		= itemDiscount;
+			solsoTotalDiscount	= invoiceDiscount;
+			
+			if ( type == 2 ) {
+				solsoDiscount	= solsoPrice * (itemDiscount / 100);
+			}
+			
+			subTotal		= solsoPrice - solsoDiscount;
+			
+			$(this).closest('tr').find(".solsoSubTotal").text( subTotal.toFixed(2) );
+			
+			$( '.solsoSubTotal' ).each(function() {
+				total += parseFloat($(this).text());
+			});
+			
+			if ( invoiceType == 2 ) {
+				solsoTotalDiscount = total * (invoiceDiscount / 100);
+			}
+			
+			$( '.solsoTotal' ).text( (total - solsoTotalDiscount).toFixed(2) );
+		});
+		/* === END INVOICE === */		
+		
+		
+		
+		/* === SIDEBAR === */
+		$('.toogle').on('click', function() {
+			$('.body').toggleClass('slide');
+			$('.sidebar').toggleClass('show');
+			$('.toogle i').toggleClass('fa-chevron-left fa-chevron-right');
+		});
+		/* === END SIDEBAR === */	
+
+		/* === ELEMENTS ===  */
+		$('html').on('keypress', '.modal', function(e) {
+		   if (e.keyCode == 13) {
+			  return false;
+		   }
+		});		
+		/* === END ELEMENTS ===  */
+	</script>
+	<!-- === END SOLUTII SOFT === -->
+	
+
+</body></html>

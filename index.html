@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Inventory System</title>
+	<meta charset="utf-8">
+
+	<!-- META -->
+	<meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- END META -->
+
+	<!-- FONTS -->
+	<link rel="stylesheet" type="text/css" href="assets/css.css">
+	<!-- END FONTS -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/select2.css">
+	<link rel="stylesheet" type="text/css" href="assets/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="assets/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker.css">	
+	<link rel="stylesheet" type="text/css" href="assets/fileinput.css">	
+	<link rel="stylesheet" type="text/css" href="assets/jquery.css">
+	<link rel="stylesheet" type="text/css" href="assets/perfect-scrollbar.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/design.css">
+	<!-- END CSS -->	
+	
+<style>.cke{visibility:hidden;}</style></head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+		<div class="brand">
+			<a class="navbar-brand" href="/vexcel">
+				<span>V-Excel</span>
+			</a>
+			
+		</div>		
+	</div>
+
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<p class="navbar-text">
+					Signed in as Admin
+				</p>
+			</li>	
+			<li>
+				<a href="/vexcel/logout">
+					<i class="fa fa-sign-out"></i> logout
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav></header>
+
+<main class="body slide">
+	<aside class="sidebar show perfectScrollbar">
+		<div id="solso-sidebar" class="list-group">
+	<a href="#" class="list-group-item  active ">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-home"></i></span>
+			<h4 class="list-group-item-heading">Dashboard</h4>
+			<p class="list-group-item-text">
+				Reports
+			</p>
+		</div>	  
+	</a>
+	
+	<a href="#" class="list-group-item ">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-users"></i></span>
+			<h4 class="list-group-item-heading">Services</h4>
+			<p class="list-group-item-text">
+				create  | Edit  | Delete 
+			</p>
+		</div>	  
+	</a>
+
+</div>
+	</aside>
+	
+	<div class="container-fluid solso-content">
+	<div class="row">
+		
+		<div class="col-md-12">
+			
+
+		
+
+			
+
+	
+</div>		
+			
+	<div class="col-md-12">
+		<h1>
+			<i class="fa fa-home"></i> Dashboard
+		</h1>	
+				
+	</div>
+	<a href="/vexcel/invoice.html" >
+	<div class="col-sm-6 col-md-3">
+		<div class="widget widget-stats bg-green">
+			<div class="stats-icon stats-icon-lg"><i class="fa fa-users fa-fw"></i></div>
+			<div class="stats-title">Laundry</div>
+			<div class="stats-number">2400</div>
+			<hr>
+			<div class="stats-desc"></div>
+		</div> 	
+	</div> 	
+    </a>
+
+	<div class="col-sm-6 col-md-3">
+		<div class="widget widget-stats bg-blue">
+			<div class="stats-icon stats-icon-lg"><i class="fa fa-puzzle-piece fa-fw"></i></div>
+			<div class="stats-title">Bakery</div>
+			<div class="stats-number">1300</div>
+			<hr>
+			<div class="stats-desc"></div>
+		</div> 	
+	</div>  
+
+	<div class="col-sm-6 col-md-3">
+		<div class="widget widget-stats bg-purple">
+			<div class="stats-icon stats-icon-lg"><i class="fa fa-file-pdf-o fa-fw"></i></div>
+			<div class="stats-title">Desktop Publishing</div>
+			<div class="stats-number">600</div>
+			<hr>
+			<div class="stats-desc"></div>
+		</div> 
+	</div> 		
+
+		
+
+			
+	</div>
+	</div>
+</main>
+
+<script type="text/javascript" src="assets/jquery_004.js"></script>
+<script type="text/javascript" src="assets/bootstrap.js"></script>
+
+	<!-- PARSLEY VALIDATION -->
+	<script type="text/javascript" src="assets/parsley.js"></script>
+	<!-- END PARSLEY VALIDATION -->
+	
+	
+	<!-- DATA TABLES -->
+	<script type="text/javascript" src="assets/datatables.js"></script>  
+	<script type="text/javascript" src="assets/datatables-bootstrap.js"></script>    
+	<script>
+		$('.solsoTable').dataTable();
+	</script>
+	<!-- END DATA TABLES -->	
+
+
+	<!-- CKEDITOR -->
+    <script type="text/javascript" src="assets/ckeditor.js"></script>
+	<script type="text/javascript" src="assets/jquery_005.js"></script>
+	<script>
+	function solsoShowEditor() {
+		UPLOADCARE_PUBLIC_KEY = "demopublickey";
+
+        if ($('.solsoEditor').length) {
+            $( 'textarea.solsoEditor' ).ckeditor({
+                uiColor: '#9AB8F3',
+                height: 300,
+             });
+        }
+	}
+	
+	solsoShowEditor();
+	</script>	
+	<!-- CKEDITOR -->
+	
+	
+	<!-- RENDRO EASY PIE CHART -->
+	<script type="text/javascript" src="assets/jquery_003.js"></script>
+	<script type="text/javascript" src="assets/jquery.js"></script>
+	<script>
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+	</script>	
+	<!-- END RENDRO EASY PIE CHART -->
+	
+	<!-- CHART.JS -->
+	<script type="text/javascript" src="assets/chart.js"></script>
+	<script>
+			var barChartClientsProducts = {
+			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+			datasets: [
+				{
+					fillColor: "rgba(220,220,220,0.5)",
+					strokeColor: "rgba(220,220,220,0.8)",
+					highlightFill: "rgba(220,220,220,0.75)",
+					highlightStroke: "rgba(220,220,220,1)",
+					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
+				},
+				{
+					fillColor: "rgba(151,187,205,0.5)",
+					strokeColor: "rgba(151,187,205,0.8)",
+					highlightFill: "rgba(151,187,205,0.75)",
+					highlightStroke : "rgba(151,187,205,1)",
+					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
+				}
+			]
+		}
+		
+		var barChartEstimatesInvoices = {
+			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+			datasets: [
+				{
+					fillColor: "rgba(220,220,220,0.5)",
+					strokeColor: "rgba(220,220,220,0.8)",
+					highlightFill: "rgba(220,220,220,0.75)",
+					highlightStroke: "rgba(220,220,220,1)",
+					data: [ '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
+				},
+				{
+					fillColor:  "rgba(151,187,205,0.5)",
+					strokeColor: "rgba(151,187,205,0.8)",
+					highlightFill : "rgba(151,187,205,0.75)",
+					highlightStroke : "rgba(151,187,205,1)",
+					data : [ '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
+				}
+			]
+		}	
+	
+		
+	
+	window.onload = function(){
+		if ($('#reportClientsProducts').length) {
+			var ctx = document.getElementById("reportClientsProducts").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartClientsProducts, {
+				responsive: true
+			});
+		}
+		
+		if ($('#reporEstimatesInvoices').length) {
+			var ctx = document.getElementById("reporEstimatesInvoices").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices, {
+				responsive: true
+			});		
+		}
+		
+		if ($('#reportClientsProducts2').length) {
+			var ctx = document.getElementById("reportClientsProducts2").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartClientsProducts2, {
+				responsive: true
+			});
+		}
+		
+		if ($('#reporEstimatesInvoices2').length) {
+			var ctx = document.getElementById("reporEstimatesInvoices2").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices2, {
+				responsive: true
+			});		
+		}			
+	}	
+	</script>
+	<!-- END CHART.JS -->
+	
+	
+	<!-- DATEPICKER -->
+	<script type="text/javascript" src="assets/bootstrap-datepicker.js"></script>
+	<script>	
+	function showDatePicker() {
+		var startDate 	= '';
+		var endDate 	= '';
+		
+		$('#dp1').datepicker()
+			.on('changeDate', function(ev){
+				startDate = new Date(ev.date);
+				$('#dp1').datepicker('hide');
+			});
+			
+		$('#dp2').datepicker()
+			.on('changeDate', function(ev){
+				if (ev.date.valueOf() < startDate.valueOf()){
+					$.growl.error({ title: "Error message", message: "The end date can not be less then the start date !"});
+					$(this).val('');
+				} else {
+					endDate = new Date(ev.date);
+				}
+				$('#dp2').datepicker('hide');
+			});		
+	}	
+	
+	showDatePicker();
+	</script>		
+	<!-- END DATEPICKER -->
+	
+	
+	<!-- TIMEPICKER -->
+	<script type="text/javascript" src="assets/bootstrap-timepicker.js"></script>
+	<script>	
+		$('.timepicker').timepicker();		
+	</script>		
+	<!-- END TIMEPICKER -->
+	
+
+	<!-- SELECT 2 -->
+	<script type="text/javascript" src="assets/select2.js"></script>
+	<script>	
+		$('.select2').select2();		
+	</script>	
+	<!-- END SELECT 2 -->
+	
+	
+	<!-- BOOTSTRAP FILEINPUT -->
+	<script type="text/javascript" src="assets/fileinput.js"></script>
+	<script>
+	function solsoUpload() {	
+		$(".solsoFileInput").fileinput({
+			allowedFileExtensions: ['jpg', 'jpeg', 'gif', 'png', 'bmp'],
+			allowedFileTypes: ['image', 'video', 'flash'],
+			removeClass: 'btn btn-danger',
+			uploadClass: 'btn btn-success',
+		});
+	}
+	
+	solsoUpload();
+	</script>		
+	<!-- END BOOTSTRAP FILEINPUT -->
+	
+
+	<!-- GROWL -->
+	<script type="text/javascript" src="assets/jquery_002.js"></script>  
+	<!-- END GROWL-->		
+	
+	
+	<!-- PERFECT-SCROLLBAR -->	
+	<script type="text/javascript" src="assets/perfect-scrollbar.js"></script>
+	<script>	
+		menuSidebarHeight = $('#solso-sidebar').height() + 50;
+		sideBarHeight	  = $('.sidebar').height();
+
+		if ( menuSidebarHeight >= sideBarHeight )	{
+			$('.perfectScrollbar').perfectScrollbar();
+		}	
+	</script>	
+	<!-- END PERFECT-SCROLLBAR -->		
+	
+	
+	<!-- === SOLUTII SOFT === -->
+	<script>
+		/* === SETTINGS && MODALS && UPLOAD === */
+		$(document).on("submit", ".solsoUploadForm", function () {	
+			$.ajax({
+				url: "http://solutiisoft.com/inventory-system/upload/upload-image",
+				type: 'POST',
+				data: new FormData( this ),
+				processData: false,
+				contentType: false,
+				success:function(data) {
+					$('#tab2').html(data);
+					solsoUpload();
+					
+					var getError = $(data).find("[name='solsoStatus']").val();
+					if ( getError == '1' ) {
+						$.growl.notice({ title: 'Update notification', message: 'Data was saved' });
+					} else {
+						$.growl.notice({ title: 'Update notification', message: 'Validation error messages' });
+					}
+				}
+			});
+			
+			return false;
+		});		
+		
+		$( document ).on('click', '.solsoAjax', function(){
+			
+			var solsoSelector	= $(this);
+			var solsoFormData 	= $(solsoSelector).closest('form').serialize();
+			var	solsoFormAction	= solsoSelector.attr('data-href');
+			var solsoFormMethod	= solsoSelector.attr('data-method');
+			var returnTO		= solsoSelector.attr('data-return');
+
+			valid = true;
+			
+			if (solsoSelector.closest('form').length > 0) {
+				valid = solsoSelector.closest('form').parsley().validate();
+			}
+
+			if (valid) {
+				$.ajax({
+					url: 	solsoFormAction,
+					type: 	solsoFormMethod,
+					data: 	solsoFormData,
+					dataType: 'html',
+					success:function(data) {
+						if (data == 0) {
+							$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+						} else {			
+							$('#' + returnTO).html(data);
+							
+							if ( $(data).find('.table').attr('data-alert') ) {
+								var getError = $(data).find('.table').attr('data-alert');
+							} else if ( $(data).closest('table').attr('data-alert') ) {
+								var getError = $(data).closest('table').attr('data-alert');	
+							} else {	
+								var getError = $(data).find("[name='solsoStatus']").val();
+							}
+							
+							if ( getError == '1' ) {
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else if ( getError == '2' ) {	
+								$.growl.warning({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-warning') });
+							} else {
+								$.growl.error({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-error') });
+							}
+							
+							if ( $(data).closest('table').attr('data-alert') ) {
+								$('#ajaxTable').html(data);
+								$('.solsoTable').dataTable();
+							}		
+
+							solsoUpload();	
+							solsoShowEditor();
+						}
+					}
+				});			
+			}
+			
+			return false;
+		});		
+		
+		$( document ).on('click', '.solsoCurrencySettings', function(e) {
+			e.preventDefault();
+			
+			var solsoSelector	= $(this);
+			var id	 			= $(this).attr('data-id');
+			var name 			= $(this).closest('label').find("input[type='radio']").attr('name');
+			var value 			= $(this).closest('label').find("input[type='radio']").val();
+		
+			if ( name == 'position') {
+				goToUrl = "http://solutiisoft.com/inventory-system/currency/position";
+			}
+			
+			if ( name == 'default') {
+				goToUrl = "http://solutiisoft.com/inventory-system/currency/default";
+			}			
+		
+			$.ajax({
+				url: goToUrl,
+				type: 'post',
+				dataType: 'html',
+				data: { itemID: id, itemValue: value  },
+				success:function(data) {
+					$('#tab5').html(data);
+					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+				}
+			});
+		});		
+
+		$( document ).on('click', '.solsoShowModal', function(){
+			modalTitle = $(this).attr('data-modal-title')
+
+			$.ajax({
+				url: $(this).attr('data-href'),
+				dataType: 'html',
+				success:function(data) {
+					if (data == 0) {
+						$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+					} else {					
+						$('.solsoModalTitle').text(modalTitle.toString());
+						$('.solsoShowForm').html(data);
+						showDatePicker();
+						solsoShowEditor();
+						
+						if ($('.select2').length) {
+							$('.select2').select2({
+								closeOnSelect:false
+							});
+						}
+					}
+				}
+			});		
+		});
+		
+		$( document ).on('click', '.solsoSave', function(e){
+			e.preventDefault();
+
+			var solsoSelector	= $(this);
+			var solsoFormAction = solsoSelector.closest('form').attr('action');
+			var solsoFormMethod = solsoSelector.closest('form').attr('method');
+			var solsoFormData	= solsoSelector.closest('form').serialize();	
+			
+			valid = solsoSelector.closest('form').parsley().validate();
+			
+			if (valid) {
+				$.ajax({
+					url: 	solsoFormAction,
+					type: 	solsoFormMethod,
+					data: 	solsoFormData,
+					cache: 	false,
+					dataType: 'html',
+					success:function(data) {
+						if (data == 0) {
+							$.growl.error({ title: 'ACCESS DENIEND', message: 'ACCESS DENIEND' });
+						} else {
+
+							if ( $(data).closest('table').attr('data-alert') ) {
+								var getError = $(data).closest('table').attr('data-alert');
+							} else if ( $(data).find('.table').attr('data-alert') ) {
+								var getError = $(data).find('.table').attr('data-alert');
+							} else if ( $(data).closest('form').attr('data-alert') ){	
+								var getError = $(data).closest('form').attr('data-alert');
+							} else if ( $(data).closest('form').attr('data-alert') ) {	
+								var getError = $(data).find('form').attr('data-alert');
+							} else {	
+								var getError = 0;
+							}						
+
+							if ( getError == '1' ) {
+								$('#solsoCrudModal').modal('hide');
+								$('#ajaxTable').html(data);
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else if ( getError == '2' )  {	
+								$.growl.warning({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-warning') });
+							} else if ( getError == '4' )  {	
+								$('.solsoShowForm').html(data);
+								$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+							} else {
+								$('.solsoShowForm').html(data);
+								$.growl.error({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-error') });
+							}
+							
+							$('.solsoTable').dataTable();
+							showDatePicker();
+							// $('.select2').select2();
+						}
+					}
+				});	
+			}
+			
+			return false;
+		});			
+		
+		$( document ).on('click', '.solsoConfirm', function(){
+			$("#solsoFormDelete").prop('action', $(this).attr('data-href'));
+			
+			if ($(this).attr('data-return')) {
+				$("#solsoFormDelete").attr('data-return', $(this).attr('data-return'));;
+			}
+		});
+		
+		$( document ).on('click', '.solsoDelete', function(e){
+			e.preventDefault();
+			
+			var solsoSelector	= $(this);
+			var solsoFormAction = $('#solsoFormDelete').attr('action');
+			
+			if ($('#solsoFormDelete').attr('data-return')) {
+				var returnTO = $('#solsoFormDelete').attr('data-return');
+			}	
+			
+			$.ajax({
+				url: 	solsoFormAction,
+				type: 	'delete',
+				cache: 	false,
+				dataType: 'html',
+				success:function(data) {
+					$('#solsoDeleteModal').modal('hide');
+					
+					if (returnTO) {
+						$('#' + returnTO).html(data);
+					} else {	
+						$('#ajaxTable').html(data);
+						$('.solsoTable').dataTable();
+						dataRefresh = solsoFormAction.split('/');
+					}
+					
+					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
+				}
+			});	
+			
+			return false;
+		});				
+		
+		$('#solsoCrudModal').on('hidden.bs.modal', function () {
+			$.ajax({
+				url: 	'admin',
+				type: 	'get',
+				cache: 	false,
+				dataType: 'html',
+				success:function(data) {
+					$('#ajaxTable').html(data);
+					$('.solsoTable').dataTable();
+				}
+			});				
+		});
+		/* === END SETTINGS && MODALS && UPLOAD === */
+
+		
+		/* === CLONE ROW === */
+		$(document).on('click', '#createClone', function(e) {
+			$( '.solsoSelect2.solsoCloneSelect2').select2('destroy');
+			
+			$( '.solsoParent' )
+				.append( '<tr>' + $( 'tr.solsoChild' ).html()  + '</tr>' );
+		
+			$( '.crt' ).each(function( index ) {
+				$( this ).text(index+1);
+			});			
+			
+			
+			$("[name='products[]']").last().val('');
+			$("[name='qty[]']").last().val('');
+			$("[name='price[]']").last().val('');
+			$("[name='taxes[]']").last().val('');
+			$("[name='discount[]']").last().val('');
+			
+			$( ".solsoSubTotal" ).last().text('0.00');
+			$( '.solsoCloneSelect2' ).select2();
+
+			return false;
+		});
+		
+		$( document ).on('click', '.removeClone', function() {
+			
+			if ( $('.removeClone').size() > 1 ) {
+				$(this).parents().eq(1).remove();
+			} else {
+				$.growl.error({ title: 'ACCESS DENIEND', message: "YOU CAN'T DELETE ALL PRODUCTS !!!" });
+			}
+			
+			$( '.crt' ).each(function( index ) {
+				$( this ).text(index+1);
+			});
+			
+			return false;
+		});
+		/* === END CLONE ROW === */	
+		
+		/* === INVOICE === */
+		$( document ).on('change', '.solsoCloneSelect2', function() {
+			inputPrice = $(this).closest('tr').find("[name='price[]']");
+			
+			$.ajax({
+				url: "http://solutiisoft.com/inventory-system/get-product-price",
+				type: 'post',
+				dataType: 'json',
+				data: { product: $(this).val() },
+				success:function(price) {
+					inputPrice.val(price);
+				}
+			});
+		});		
+		
+		$( document ).on('change', '.solsoCurrencyEvent', function() {
+			if ( $(this).val() != '') {
+				$( '.solsoCurrency' ).text( $( "[name='currency'] option[value='" + $(this).val() + "']").text() );
+			}
+		});	
+		
+		$( document ).on("click change paste keyup", ".solsoEvent", function() {
+			var qty			= $(this).closest('tr').find("[name='qty[]']").val();
+			var price		= $(this).closest('tr').find("[name='price[]']").val();
+			var tax			= $(this).closest('tr').find("[name='taxes[]']").val();
+			var discount	= $(this).closest('tr').find("[name='discount[]']").val();	
+			var type		= $(this).closest('tr').find("[name='discountType[]']").val();	
+			var totalDisc	= $(this).closest('tr').find("[name='invoiceDiscount']").val();	
+			var invoiceType	= $(this).closest('tr').find("[name='invoiceDiscountType']").val();	
+			var subTotal	= 0;
+			var total		= 0;
+			
+			itemQty			= parseFloat(qty)  > 0 		? parseFloat(qty).toFixed(2) 		: 0;
+			itemPrice		= parseFloat(price)  > 0 	? parseFloat(price).toFixed(2) 		: 0;
+			itemTax			= parseFloat(tax) > 0 		? parseFloat(tax).toFixed(2) 		: 0;
+			itemDiscount	= parseFloat(discount) > 0	? parseFloat(discount).toFixed(2)	: 0;
+			invoiceDiscount	= parseFloat(totalDisc) > 0	? parseFloat(totalDisc).toFixed(2)	: 0;
+			
+			solsoValue 			= itemQty * itemPrice;
+			solsoTax			= solsoValue * (itemTax / 100);
+			solsoPrice			= solsoValue + solsoTax;
+			solsoDiscount		= itemDiscount;
+			solsoTotalDiscount	= invoiceDiscount;
+			
+			if ( type == 2 ) {
+				solsoDiscount	= solsoPrice * (itemDiscount / 100);
+			}
+			
+			subTotal		= solsoPrice - solsoDiscount;
+			
+			$(this).closest('tr').find(".solsoSubTotal").text( subTotal.toFixed(2) );
+			
+			$( '.solsoSubTotal' ).each(function() {
+				total += parseFloat($(this).text());
+			});
+			
+			if ( invoiceType == 2 ) {
+				solsoTotalDiscount = total * (invoiceDiscount / 100);
+			}
+			
+			$( '.solsoTotal' ).text( (total - solsoTotalDiscount).toFixed(2) );
+		});
+		/* === END INVOICE === */		
+		
+		
+		
+		/* === SIDEBAR === */
+		$('.toogle').on('click', function() {
+			$('.body').toggleClass('slide');
+			$('.sidebar').toggleClass('show');
+			$('.toogle i').toggleClass('fa-chevron-left fa-chevron-right');
+		});
+		/* === END SIDEBAR === */	
+
+		/* === ELEMENTS ===  */
+		$('html').on('keypress', '.modal', function(e) {
+		   if (e.keyCode == 13) {
+			  return false;
+		   }
+		});		
+		/* === END ELEMENTS ===  */
+	</script>
+	<!-- === END SOLUTII SOFT === -->
+	
+
+<div style="display:none;" id="link64_vdp_tabid">1004</div></body></html>
