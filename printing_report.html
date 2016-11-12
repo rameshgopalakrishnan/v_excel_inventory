@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0046)http://solutiisoft.com/inventory-system/client -->
+<html lang="en" class="gr__solutiisoft_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Inventory System</title>
-	<meta charset="utf-8">
+	
 
 	<!-- META -->
 	<meta name="description" content="">
@@ -11,25 +11,35 @@
 	<!-- END META -->
 
 	<!-- FONTS -->
-	<link rel="stylesheet" type="text/css" href="assets/css.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/css">
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="assets/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="assets/select2.css">
-	<link rel="stylesheet" type="text/css" href="assets/select2-bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="assets/datepicker.css">	
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker.css">	
-	<link rel="stylesheet" type="text/css" href="assets/fileinput.css">	
-	<link rel="stylesheet" type="text/css" href="assets/jquery.css">
-	<link rel="stylesheet" type="text/css" href="assets/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/select2-bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/datepicker.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/bootstrap-timepicker.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/fileinput.min.css">	
+	<link rel="stylesheet" type="text/css" href="./client_files/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="assets/design.css">
+	<link rel="stylesheet" type="text/css" href="./client_files/design.css">
 	<!-- END CSS -->	
 	
+	<script async="" src="./client_files/analytics.js.download"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-44073820-17', 'auto');
+	  ga('send', 'pageview');
+
+	</script>	
 <style>.cke{visibility:hidden;}</style></head>
-<body>
+<body data-gr-c-s-loaded="true">
 <header>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container-fluid">
@@ -41,125 +51,237 @@
 		</button>
 
 		<div class="brand">
-			<a class="navbar-brand" href="/vexcel">
-				<span>V-Excel</span>
+			<a class="navbar-brand" href="#">
+				<span>Printing and Documentation</span>
 			</a>
 			
+			<a class="toogle pull-right">
+				<i class="fa fa-chevron-left"></i>
+			</a>
 		</div>		
 	</div>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<p class="navbar-text">
-					Signed in as Admin
-				</p>
-			</li>	
-			<li>
-				<a href="/vexcel/logout">
-					<i class="fa fa-sign-out"></i> logout
-				</a>
-			</li>
-		</ul>
+	
 	</div>
-</div>
 </nav></header>
 
 <main class="body slide">
 	<aside class="sidebar show perfectScrollbar">
 		<div id="solso-sidebar" class="list-group">
-	<a href="#" class="list-group-item  active ">
+	
+	<a href="printing_doc_invoice.html" class="list-group-item ">
 		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-home"></i></span>
-			<h4 class="list-group-item-heading">Dashboard</h4>
-			<p class="list-group-item-text">
-				Reports
-			</p>
+			<span class="input-group-addon"><i class="fa fa-file-pdf-o"></i></span>
+			<h4 class="list-group-item-heading">Invoices</h4>
 		</div>	  
 	</a>
 	
-	<a href="#" class="list-group-item ">
+	<a href="client.html" class="list-group-item  active ">
 		<div class="input-group">
 			<span class="input-group-addon"><i class="fa fa-users"></i></span>
-			<h4 class="list-group-item-heading">Services</h4>
-			<p class="list-group-item-text">
-				create  | Edit  | Delete 
-			</p>
+			<h4 class="list-group-item-heading">Printing and Documentation</h4>
 		</div>	  
-	</a>
-
+	</a>	
 </div>
 	</aside>
 	
 	<div class="container-fluid solso-content">
 	<div class="row">
 		
-		<div class="col-md-12">
-			
-
 		
-
-			
-
-	
-</div>		
-			
+		<div class="col-md-12"></div>		
+		
 	<div class="col-md-12">
-		<h1>
-			<i class="fa fa-home"></i> Dashboard
-		</h1>	
-				
-	</div>
-	<a href="/vexcel/invoice.html" >
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-green">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-users fa-fw"></i></div>
-			<div class="stats-title">Laundry</div>
-			<div class="stats-number">2400</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 	
-	</div> 	
-    </a>
+		
+		<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="clientCreate.html" data-modal-title="Create new client">
+			<i class="fa fa-user-plus"></i> Add new report
+		</button>
+	</div>	
 
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-blue">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-puzzle-piece fa-fw"></i></div>
-			<div class="stats-title">Bakery</div>
-			<div class="stats-number">1300</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 	
-	</div>  
-<a href="/vexcel/printing_doc_invoice.html" >
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-purple">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-file-pdf-o fa-fw"></i></div>
-			<div class="stats-title">Printing and Documentation</div>
-			<div class="stats-number">600</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 
-	</div> 		
+	<div class="col-md-12 top40">
+		
+
+		<div id="ajaxTable" class="table-responsive">
+			<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+			<div class="row"><div class="col-sm-12"><table class="table solsoTable dataTable no-footer" data-alert="" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+	<thead>
+		<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th>
+		<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 136px;">Date</th>
+		<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 151px;">Trainee</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contact: activate to sort column ascending" style="width: 102px;">Trainer</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="E-mail: activate to sort column ascending" style="width: 127px;">Practice/Production</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 90px;">Activity</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 105px;">Quantity</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 110px;">Unit</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Work Accomplished</th></tr>
+	</thead>
+
+	<tbody>
+	<tr role="row" class="odd">
+			<td class="sorting_1">
+				1
+			</td>
+
+			<td>
+				03/Oct/2016 Mon
+			</td>
+
+			<td>
+				Akshay Keerthi
+			</td>
+
+			<td>
+				Niraja
+			</td>
+
+			<td>
+				Practice
+			</td>
+
+			<td>
+				Spiral & Wiro Binding
+			</td>
+
+			<td>
+				10
+			</td>	
+			<td>
+				Nos
+			</td>
+			<td>
+				Visiting cards, envelops for mandaveli
+			</td>
+			
+			
+		</tr></tbody>
+</table></div></div>
+</div>	
+		</div>	
+	</div>
+	
+		
+		<div class="modal fade" id="solsoCrudModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="solsoModalTitle">Create New Printing and Documentation Report</h4>
+		</div>
+		
+		<div class="modal-body">
+			<div class="row solsoShowForm"></div>
+			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" role="form" class="solsoForm" data-alert=""><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+	
+	<div class="col-md-12">
+		
+		<div class="form-group">
+			<label for="date">Date</label>
+			<input type="date" name="email" autocomplete="off" value="">
+			
+					</div>		
+		
+		<div class="form-group">
+			<label for="trainee">Trainee</label>
+			<input type="text" name="trainer" class="form-control required" autocomplete="off" value="">
+			
+					</div>		
+					<div class="form-group">
+			<label for="trainer">Trainer</label>
+			<input type="text" name="trainee" class="form-control required" autocomplete="off" value="">
+			
+					</div>	
+		
+		<div class="form-group">
+			<label for="prac_prod"></label>
+			
+			<input type="radio"  name="prac_prod" value="Practice"> Practice</input><br>
+            <input type="radio"  name="prac_prod" value="Production"> Production</input>
+      
+
+					</div>		
+
+		<div class="form-group">
+			<label for="activity">Activity</label>
+			<input type="text" name="activity" class="form-control" autocomplete="off" value="">
+			
+					</div>			
+		
+		<div class="form-group">
+			<label for="Quantity">Quantity</label>
+			<input type="number" name="Quantity" min="1" max="10000">
+			<label for="Unit" >Unit</label>
+			<select value="Unit">
+  <option value="nos">nos</option>
+  <option value="kg">kg</option>
+  <option value="gms">gms</option>
+</select>
+			
+					</div>
 
 		
 
-			
+		
+
+		<div class="form-group">
+			<label for="Workaccomplished">Work Accomplished</label>
+			<textarea name="Workaccomplished" class="form-control" rows="7" autocomplete="off"></textarea>
+		</div>	
+	</div>	
+	
+	<div class="form-group col-md-12">
+		<button type="button" class="btn btn-success solsoSave" data-message-title="Create notification" data-message-error="Validation error messages" data-message-success="Data was saved">
+			<i class="fa fa-save"></i> Save
+		</button>
+	</div>
+	
+</form>
+		</div>
+		
+		<div class="modal-footer">
+			<button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+</div>
+</div>
+
+		<div class="modal fade" id="solsoDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Delete dialog</h4>
+        </div>
+
+        <div class="modal-body">
+            <p>You are about to delete this item this procedure is irreversible !</p>
+            <p>Do you want to proceed ?</p><p>
+        </p></div>
+
+        <div class="modal-footer">
+
+			<form method="POST" action="http://solutiisoft.com/inventory-system/client" accept-charset="UTF-8" id="solsoFormDelete"><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
+				
+				<button type="button" class="btn btn-primary" data-dismiss="modal">
+					NO
+				</button>
+				
+				<button class="btn btn-danger solsoDelete" data-message-title="Delete notification" data-message-success="Data was deleted">
+					YES
+				</button>
+					
+			</form>									
+
+        </div>
+    </div>
+</div>
+</div>		
 	</div>
 	</div>
 </main>
 
-<script type="text/javascript" src="assets/jquery_004.js"></script>
-<script type="text/javascript" src="assets/bootstrap.js"></script>
+<script type="text/javascript" src="./client_files/jquery.js.download"></script>
+<script type="text/javascript" src="./client_files/bootstrap.min.js.download"></script>
 
 	<!-- PARSLEY VALIDATION -->
-	<script type="text/javascript" src="assets/parsley.js"></script>
+	<script type="text/javascript" src="./client_files/parsley.js.download"></script>
 	<!-- END PARSLEY VALIDATION -->
 	
 	
 	<!-- DATA TABLES -->
-	<script type="text/javascript" src="assets/datatables.js"></script>  
-	<script type="text/javascript" src="assets/datatables-bootstrap.js"></script>    
+	<script type="text/javascript" src="./client_files/datatables.min.js.download"></script>  
+	<script type="text/javascript" src="./client_files/datatables-bootstrap.js.download"></script>    
 	<script>
 		$('.solsoTable').dataTable();
 	</script>
@@ -167,8 +289,8 @@
 
 
 	<!-- CKEDITOR -->
-    <script type="text/javascript" src="assets/ckeditor.js"></script>
-	<script type="text/javascript" src="assets/jquery_005.js"></script>
+    <script type="text/javascript" src="./client_files/ckeditor.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.js(1).download"></script>
 	<script>
 	function solsoShowEditor() {
 		UPLOADCARE_PUBLIC_KEY = "demopublickey";
@@ -187,8 +309,8 @@
 	
 	
 	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="assets/jquery_003.js"></script>
-	<script type="text/javascript" src="assets/jquery.js"></script>
+	<script type="text/javascript" src="./client_files/jquery.easing.min.js.download"></script>
+	<script type="text/javascript" src="./client_files/jquery.easypiechart.min.js.download"></script>
 	<script>
 		$('.chart').easyPieChart({
 			easing: 'easeOutBounce',
@@ -200,47 +322,8 @@
 	<!-- END RENDRO EASY PIE CHART -->
 	
 	<!-- CHART.JS -->
-	<script type="text/javascript" src="assets/chart.js"></script>
+	<script type="text/javascript" src="./client_files/chart.min.js.download"></script>
 	<script>
-			var barChartClientsProducts = {
-			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-			datasets: [
-				{
-					fillColor: "rgba(220,220,220,0.5)",
-					strokeColor: "rgba(220,220,220,0.8)",
-					highlightFill: "rgba(220,220,220,0.75)",
-					highlightStroke: "rgba(220,220,220,1)",
-					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
-				},
-				{
-					fillColor: "rgba(151,187,205,0.5)",
-					strokeColor: "rgba(151,187,205,0.8)",
-					highlightFill: "rgba(151,187,205,0.75)",
-					highlightStroke : "rgba(151,187,205,1)",
-					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
-				}
-			]
-		}
-		
-		var barChartEstimatesInvoices = {
-			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-			datasets: [
-				{
-					fillColor: "rgba(220,220,220,0.5)",
-					strokeColor: "rgba(220,220,220,0.8)",
-					highlightFill: "rgba(220,220,220,0.75)",
-					highlightStroke: "rgba(220,220,220,1)",
-					data: [ '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
-				},
-				{
-					fillColor:  "rgba(151,187,205,0.5)",
-					strokeColor: "rgba(151,187,205,0.8)",
-					highlightFill : "rgba(151,187,205,0.75)",
-					highlightStroke : "rgba(151,187,205,1)",
-					data : [ '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
-				}
-			]
-		}	
 	
 		
 	
@@ -278,7 +361,7 @@
 	
 	
 	<!-- DATEPICKER -->
-	<script type="text/javascript" src="assets/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="./client_files/bootstrap-datepicker.js.download"></script>
 	<script>	
 	function showDatePicker() {
 		var startDate 	= '';
@@ -308,7 +391,7 @@
 	
 	
 	<!-- TIMEPICKER -->
-	<script type="text/javascript" src="assets/bootstrap-timepicker.js"></script>
+	<script type="text/javascript" src="./client_files/bootstrap-timepicker.min.js.download"></script>
 	<script>	
 		$('.timepicker').timepicker();		
 	</script>		
@@ -316,7 +399,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="assets/select2.js"></script>
+	<script type="text/javascript" src="./client_files/select2.js.download"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -324,7 +407,7 @@
 	
 	
 	<!-- BOOTSTRAP FILEINPUT -->
-	<script type="text/javascript" src="assets/fileinput.js"></script>
+	<script type="text/javascript" src="./client_files/fileinput.min.js.download"></script>
 	<script>
 	function solsoUpload() {	
 		$(".solsoFileInput").fileinput({
@@ -341,12 +424,12 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="assets/jquery_002.js"></script>  
+	<script type="text/javascript" src="./client_files/jquery.growl.js.download"></script>  
 	<!-- END GROWL-->		
 	
 	
 	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="assets/perfect-scrollbar.js"></script>
+	<script type="text/javascript" src="./client_files/perfect-scrollbar.min.js.download"></script>
 	<script>	
 		menuSidebarHeight = $('#solso-sidebar').height() + 50;
 		sideBarHeight	  = $('.sidebar').height();
@@ -596,7 +679,7 @@
 		
 		$('#solsoCrudModal').on('hidden.bs.modal', function () {
 			$.ajax({
-				url: 	'admin',
+				url: 	'client',
 				type: 	'get',
 				cache: 	false,
 				dataType: 'html',
@@ -734,4 +817,4 @@
 	<!-- === END SOLUTII SOFT === -->
 	
 
-<div style="display:none;" id="link64_vdp_tabid">1004</div></body></html>
+</body></html>
