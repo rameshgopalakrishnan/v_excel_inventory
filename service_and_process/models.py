@@ -42,6 +42,7 @@ class MasterProcess(models.Model):
     user = models.ManyToManyField(User, through='MappingUserProcess')
 
 
-class MappingUserProcess(models.Model):
-    user = models.ForeignKey(User)
-    process = models.ForeignKey(MasterProcess)
+class MasterProduct(models.Model):
+    """Cookies"""
+
+    label = models.TextField()
