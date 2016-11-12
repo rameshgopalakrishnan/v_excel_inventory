@@ -13,10 +13,15 @@ class Order(models.Model):
 
     # calculate tax in the invoice
 
+class MasterTag(models.Model):
+    CHOICE = ((1, 'In Use'),
+              (2, 'Free'))
+    status = models.IntegerField(CHOICE)
+
 
 class Item(models.Model):
 
     service = models.ForeignKey(MasterService)
     product = models.ForeignKey(MasterProduct)
     order = models.ForeignKey(Order)
-    tag_id = models.IntegerField()
+    tag_id = models.ForeignKey(MasterTag)
