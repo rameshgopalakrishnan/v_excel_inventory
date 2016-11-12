@@ -73,7 +73,7 @@ ROOT_URLCONF = 'v_excel_inventory.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['webui'],
+        'DIRS': ['templates', 'webui'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
