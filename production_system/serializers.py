@@ -4,5 +4,7 @@ from production_system.models import Task
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    model = Task
-    fields = '__all__'
+
+    class Meta:
+        model = Task
+        fields = '__all__'
