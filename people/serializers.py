@@ -11,6 +11,7 @@ class CustomerSerializer(serializers.ModelSerializer):
     def validate_phone_number(self, val):
         if len(str(val)) != 10:
             raise serializers.ValidationError('The phone number must be 10 digits long')
+        return val
 
     class Meta:
         model = Customer
