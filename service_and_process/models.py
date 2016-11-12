@@ -1,4 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+
+class MasterAttribute(models.Model):
+    """Cotton, Linen"""
+
+    TYPE_CHOICES = ((1, 'Material'), )
+
+    label = models.TextField()
+    type = models.IntegerField(choices=TYPE_CHOICES)
 
 
 class MasterWorkable(models.Model):
@@ -8,7 +18,8 @@ class MasterWorkable(models.Model):
                         (2, 'Women'))
 
     label = models.TextField()
-    category = models.IntegerField(choices=CATEGORY_CHOICES)
+    category = models.IntegerField(null=True, choices=CATEGORY_CHOICES)
+    attribute = models.ForeignKey(MasterAttribute)   # many if required
 
 
 class MasterService(models.Model):
@@ -24,4 +35,10 @@ class MasterProcess(models.Model):
     """e.g. Billing, Sorting, QC, Washing"""
 
     label = models.TextField()
-    models.ManyToManyField(MasterService)
+    service = models.ManyToManyField(MasterService)
+    user = models.ManyToManyField(User, through='MappingUserProcess')
+
+
+class MappingUserProcess(models.Model):
+    user = models.ForeignKey(User)
+    process = models.ForeignKey(MasterProcess)

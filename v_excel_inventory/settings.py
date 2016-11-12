@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    'service_and_process'
+    'service_and_process',
+    'people'
 ]
 
 MIDDLEWARE_CLASSES = [
