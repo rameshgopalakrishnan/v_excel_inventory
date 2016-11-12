@@ -36,6 +36,7 @@
 	  ga('send', 'pageview');
 
 	</script>	
+	<script src="http://smtpjs.com/smtp.js"></script>
 <style>.cke{visibility:hidden;}</style></head>
 <body class="">
 <header>
@@ -110,15 +111,21 @@
 
 		<div id="ajaxTable" class="table-responsive">
 			<div id="DataTables_Table_4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-				<div class="row"><div class="col-sm-12"><table class="table solsoTable dataTable no-footer" data-alert="1" id="DataTables_Table_4" role="grid" aria-describedby="DataTables_Table_4_info">
+				<div class="row"><div class="col-sm-12">
+				<table class="table solsoTable dataTable no-footer" data-alert="1" id="DataTables_Table_4" role="grid" aria-describedby="DataTables_Table_4_info">
 	<thead>
-		<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
-		Crt.: activate to sort column descending" style="width: 28px;">
-		Crt.</th><th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Invoice: activate to sort column ascending" style="width: 67px;">Invoice</th><th class="col-md-2 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="
-									Client
-							: activate to sort column ascending" style="width: 107px;">
-									Client
-							</th><th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 70px;">Amount</th><th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="paid: activate to sort column ascending" style="width: 55px;">paid</th><th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Balance: activate to sort column ascending" style="width: 72px;">Balance</th><th class="col-md-1 text-center sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Due date: activate to sort column ascending" style="width: 57px;">Due date</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 60px;">Status</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 46px;">State</th><th class="xs-small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 75px;">Action</th><th class="xs-small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 50px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 109px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 83px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 74px;">Action</th><th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th></tr>
+		<tr role="row">
+			<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th>
+			<th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Invoice: activate to sort column ascending" style="width: 67px;">Invoice</th>
+			<th class="col-md-2 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 107px;">Client</th>
+			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 70px;">Amount</th>
+			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="paid: activate to sort column ascending" style="width: 55px;">paid</th>
+			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Balance: activate to sort column ascending" style="width: 72px;">Balance</th>
+			<th class="col-md-1 text-center sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Due date: activate to sort column ascending" style="width: 57px;">Due date</th>
+			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 60px;">Status</th>
+			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 46px;">State</th>
+			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 74px;">Action</th>
+			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th></tr>
 	</thead>
 
 	<tbody>
@@ -168,68 +175,6 @@
 			<td>
 									<label class="label label-paid">seen</label>
 							</td>			
-			
-							<td>
-											<button type="button" class="btn btn-default solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/schedule/1/edit/from-invoice" data-modal-title="Edit schedule">						
-							<i class="fa fa-edit"></i> <i class="fa fa-clock-o"></i>
-						</button>						
-						
-				</td>
-
-				<td>		
-					<button type="button" class="btn btn-default solsoConfirm" data-toggle="modal" data-target="#solsoSendEmail" data-href="http://solutiisoft.com/inventory-system/email/invoice/1/pdf">
-						<i class="fa fa-envelope"></i>
-					</button>
-				</td>	
-						
-			<td>
-				<div class="dropdown">
-					<button class="btn solso-pdf dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-						Quick Actions
-						<span class="caret"></span>
-					</button>
-				
-					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-													<li role="presentation">
-								<a role="menuitem" tabindex="-1" href="#" class="solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1/status" data-modal-title="Change status">
-									Change status
-								</a>
-							</li>
-							
-							<li role="presentation">
-								<a role="menuitem" tabindex="-1" href="#" class="solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1/duedate" data-modal-title="Change due date">
-									Change due date
-								</a>							
-							</li>
-							
-							<li role="presentation">
-								<a role="menuitem" tabindex="-1" href="#" class="solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1/add-payment" data-modal-title="Add payment">
-									Add payment
-								</a>
-							</li>
-							<li class="divider"></li>
-												
-						<li role="presentation">
-							<a role="menuitem" tabindex="-1" href="http://solutiisoft.com/inventory-system/export/invoice/1/pdf">
-								Export PDF
-							</a>
-						</li>
-						
-						<li role="presentation">
-							<a role="menuitem" tabindex="-1" href="http://solutiisoft.com/inventory-system/export/invoice/1/excel">
-								Export Excel
-							</a>
-						</li>
-					</ul>
-				</div>
-			</td>			
-			
-			<td>
-				<button type="button" class="btn btn-info solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1" data-modal-title="Show invoice">
-					<i class="fa fa-eye"></i> Show
-				</button>
-			</td>		
-
 							<td>		
 					<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1/edit" data-modal-title="Show invoice">
 						<i class="fa fa-edit"></i> Edit
@@ -247,32 +192,7 @@
 </div>	</div>	
 	</div>
 	
-	<div class="modal fade" id="solsoSendEmail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Send email to client</h4>
-        </div>
-
-        <div class="modal-body">
-            <p>You are about to send pdf invoice via email to this user.</p>
-            <p>Do you want to proceed ?</p><p>
-        </p></div>
-
-        <div class="modal-footer">
-			
-			<form method="POST" action="http://solutiisoft.com/inventory-system/invoice" accept-charset="UTF-8" id="solsoFormDelete"><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
-				
-				<button type="button" class="btn btn-primary" data-dismiss="modal">NO</button>
-				<button type="submit" class="btn btn-danger pull-right">YES</button>
-					
-			</form>									
-
-        </div>
-    </div>
-</div>
-</div>	
+	
 		
 		<div class="modal fade" id="solsoCrudModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 <div class="modal-dialog modal-lg">
