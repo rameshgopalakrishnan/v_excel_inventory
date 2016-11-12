@@ -10,6 +10,9 @@ class MasterAttribute(models.Model):
     label = models.TextField()
     type = models.IntegerField(choices=TYPE_CHOICES)
 
+    class Meta:
+        unique_together = (("label", "type"), )
+
 
 class MasterWorkable(models.Model):
     """e.g. Shirt, T. Shirt, Trousers"""
@@ -19,7 +22,7 @@ class MasterWorkable(models.Model):
 
     label = models.TextField()
     category = models.IntegerField(null=True, choices=CATEGORY_CHOICES)
-    attribute = models.ForeignKey(MasterAttribute)   # many if required
+    attribute = models.ForeignKey(MasterAttribute, blank=True, null=True)   # many if required
 
 
 class MasterService(models.Model):
