@@ -41,6 +41,7 @@ class MasterProduct(models.Model):
     shelf_life_in_days = models.IntegerField()
     price = models.DecimalField(max_digits=7, decimal_places=2)
     tax = models.DecimalField(max_digits=4, decimal_places=2)
+    batch_size = models.IntegerField()
 
 
 class MasterProcess(models.Model):
