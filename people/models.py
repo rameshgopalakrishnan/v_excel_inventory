@@ -4,7 +4,7 @@ from django.db import models
 from service_and_process.models import MasterProcess
 
 
-class MasterUnit(models.Model):
+class MasterSection(models.Model):
     CHOICES = ((1, 'Laundry'),
                (2, 'Kitchen'))
     label = models.IntegerField(CHOICES)
@@ -13,7 +13,8 @@ class MasterUnit(models.Model):
 class InternalUser(models.Model):
     user = models.OneToOneField(User)
     parent = models.ForeignKey('self')
-    unit = models.ForeignKey(MasterUnit)
+    section = models.ForeignKey(MasterSection)
+    present_trainer = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
 
 
 class Customer(models.Model):
@@ -21,14 +22,3 @@ class Customer(models.Model):
     address = models.TextField()
     phone_number = models.IntegerField()
     email_id = models.EmailField()
-
-
-class MappingUserProcess(models.Model):
-    """User is ironing"""
-
-    user = models.ForeignKey(User)
-    process = models.ForeignKey(MasterProcess)
-    entry_timestamp = models.DateTimeField(auto_now_add=True)
-    assigned_timestamp = models.DateTimeField()
-    completed_timestamp = models.DateTimeField()
-    is_success = models.BooleanField(default=True)
