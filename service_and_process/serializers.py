@@ -5,3 +5,4 @@ from rest_framework import serializers
 class MasterWorkableSerializer(serializers.ModelSerializer):
     class Meta:
         model = MasterWorkable
+        fields = '__all__'
