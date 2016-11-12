@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import viewsets, routers
+from .models import MasterWorkable
+from .serializers import MasterWorkableSerializer
 
-# Create your views here.
+
+class MasterWorkableViewset(viewsets.ModelViewSet):
+    queryset = MasterWorkable.objects.all()
+    serializer_class = MasterWorkableSerializer
+
+
+router = routers.DefaultRouter()
+router.register(r'workable', MasterWorkableViewset)
