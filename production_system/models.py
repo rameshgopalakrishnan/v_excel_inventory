@@ -59,7 +59,7 @@ class Purchase(models.Model):
 class MappingProductMaterial(models.Model):
 
     product = models.ForeignKey(MasterProduct)
-    material = models.ForeignKey(MasterMaterial)
+    raw_material = models.ForeignKey(MasterRawMaterial)
     quantity = models.IntegerField()
 
 
@@ -79,6 +79,7 @@ class Production(models.Model):
     PRODUCTION_CHOICE = ((1, 'Training'),
                          (2, 'Actual'))
 
+    item = models.ForeignKey(Item)
     product = models.ForeignKey(MasterProduct)
     entry_timestamp = models.DateTimeField(auto_now_add=True)
     expected_quantity = models.IntegerField()
