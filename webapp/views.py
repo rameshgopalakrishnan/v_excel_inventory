@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from people.models import Customer
-from people.models import Service
+from service_and_process.models import MasterService
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -23,5 +23,5 @@ class ServicesList(APIView):
     template_name = 'services_list.html'
 
     def get(self, request):
-        queryset = Service.objects.all()
+        queryset = MasterService.objects.all()
         return Response({'services': queryset})
