@@ -8,12 +8,19 @@ from production_system.models import Item
 from production_system.models import Inventory
 from production_system.models import Purchase
 from production_system.models import Production
+from production_system.models import ProductInventory
+from production_system.models import MasterRawMaterial
+from production_system.models import MasterTag
+
 
 from production_system.serializers import OrderSerializer
 from production_system.serializers import ItemSerializer
 from production_system.serializers import InventorySerializer
 from production_system.serializers import PurchaseSerializer
 from production_system.serializers import ProductionSerializer
+from production_system.serializers import ProductInventorySerializer
+from production_system.serializers import RawMaterialSerializer
+from production_system.serializers import TagSerializer
 
 
 class TaskViewset(viewsets.ModelViewSet):
@@ -45,3 +52,15 @@ class ProductionViewset(viewsets.ModelViewSet):
     queryset = Production.objects.all()
     serializer_class = ProductionSerializer
 
+
+class ProductInventoryViewset(viewsets.ModelViewSet):
+    queryset = ProductInventory.objects.all()
+    serializer_class = ProductInventorySerializer
+
+class RawMaterialViewset(viewsets.ModelViewSet):
+    queryset = MasterRawMaterial.objects.all()
+    serializer_class = RawMaterialSerializer
+
+class TagViewset(viewsets.ModelViewSet):
+    queryset = MasterTag.objects.all()
+    serializer_class = TagSerializer
