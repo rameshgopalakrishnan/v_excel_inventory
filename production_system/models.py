@@ -29,8 +29,8 @@ class MasterTag(models.Model):
 class Item(models.Model):
     """Can either be service or product"""
 
-    service = models.ForeignKey(MasterService, null=True)
-    product = models.ForeignKey(MasterProduct, null=True)
+    service = models.ForeignKey(MasterService, blank=True, null=True)
+    product = models.ForeignKey(MasterProduct, blank=True, null=True)
     order = models.ForeignKey(Order)
     tag_id = models.ForeignKey(MasterTag)
 
@@ -92,7 +92,8 @@ class Task(models.Model):
     is_success = models.BooleanField(default=True)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.user.user.username)
+        return "{}. {} - {}".format(self.id, self.user.user.username, self.process.label)
+
 
 class Production(models.Model):
     PRODUCTION_CHOICE = ((1, 'Training'),
