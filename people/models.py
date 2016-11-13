@@ -3,7 +3,7 @@ from django.db import models
 
 
 class MasterSection(models.Model):
-    label = models.IntegerField(unique=True)
+    label = models.TextField(unique=True)
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
