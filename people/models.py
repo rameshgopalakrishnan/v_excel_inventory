@@ -11,9 +11,12 @@ class MasterSection(models.Model):
 
 class InternalUser(models.Model):
     user = models.OneToOneField(User)
-    parent = models.ForeignKey('self')
+    parent = models.ForeignKey('self', null=True, blank=True)
     section = models.ForeignKey(MasterSection)
     # present_trainer = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
+
+    def __str__(self):
+        return "{}. {} : {}".format(self.id, self.user.username, self.section.get_label_display())
 
 
 class Customer(models.Model):
