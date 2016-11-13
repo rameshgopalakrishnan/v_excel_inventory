@@ -7,6 +7,8 @@ from production_system.models import Inventory
 from production_system.models import Purchase
 from production_system.models import Production
 from production_system.models import ProductInventory
+from production_system.models import MasterRawMaterial
+
 
 class TaskSerializer(serializers.ModelSerializer):
 
@@ -55,3 +57,8 @@ class ProductInventorySerializer(serializers.ModelSerializer):
         model = ProductInventory
         fields = '__all__'
 
+class RawMaterialSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MasterRawMaterial
+        fields = '__all__'
