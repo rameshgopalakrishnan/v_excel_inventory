@@ -745,7 +745,7 @@ var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 		url : customerSaveUrl,
 		type : 'POST',
 		dataType : 'json',
-		data : JSON.stringify(data),
+		data : data,
 		success : function(data) {
 			alert("successfully saved");
 		},failure : function(data) {
