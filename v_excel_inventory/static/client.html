@@ -728,9 +728,35 @@
 		/* === END ELEMENTS ===  */
 	</script>
 	<!-- === END SOLUTII SOFT === -->
+<script type="text/javascript">
+var customerListUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 	
+	
+
+function saveCustomerData() {
+	var data = {
+		"name" : $("#name").val(),
+		"phone_number" : $("#phone").val(),
+		"email_id" : $("#email").val(),
+		"address" : $("#address").val()
+	}
+	$.ajax({
+		url : customerListUrl,
+		type : 'POST',
+		dataType : 'json',
+		data : JSON.stringify(data),
+		success : function(data) {
+			alert("successfully saved");
+		},failure : function(data) {
+			alert("Failed to add customer");
+		}
+	});
+
+}	
+</script>
 <script type="text/javascript">
 	var customerListUrl = "https://v-excel-inventory.herokuapp.com/api/customers";
+
 
 	$.ajax({
 		url : customerListUrl,
