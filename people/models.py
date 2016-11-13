@@ -1,16 +1,12 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-from service_and_process.models import MasterProcess
-
 
 class MasterSection(models.Model):
-    CHOICES = ((1, 'Laundry'),
-               (2, 'Kitchen'))
-    label = models.IntegerField(choices=CHOICES)
+    label = models.TextField()
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.get_label_display())
+        return "{}. {}".format(self.id, self.label)
 
 
 class InternalUser(models.Model):
@@ -26,7 +22,7 @@ class InternalUser(models.Model):
 class Customer(models.Model):
     name = models.TextField()
     address = models.TextField()
-    phone_number = models.IntegerField()
+    phone_number = models.BigIntegerField()
     email_id = models.EmailField()
 
 
