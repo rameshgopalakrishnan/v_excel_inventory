@@ -8,7 +8,7 @@ from production_system.models import Purchase
 from production_system.models import Production
 from production_system.models import ProductInventory
 from production_system.models import MasterRawMaterial
-
+from production_system.models import MasterTag
 
 class TaskSerializer(serializers.ModelSerializer):
 
@@ -61,4 +61,10 @@ class RawMaterialSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MasterRawMaterial
+        fields = '__all__'
+
+class TagSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model =  MasterTag
         fields = '__all__'

@@ -16,7 +16,7 @@ class InternalUser(models.Model):
     # present_trainer = models.ManyToManyField('self', through='production_system.MappingTrainerTraineeTask')
 
     def __str__(self):
-        return "{}. {} : {}".format(self.id, self.user.username, self.section.get_label_display())
+        return "{}. {} : {}".format(self.id, self.user.username, self.section.label)
 
 
 class Customer(models.Model):
