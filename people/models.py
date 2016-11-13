@@ -25,4 +25,7 @@ class Customer(models.Model):
     phone_number = models.BigIntegerField()
     email_id = models.EmailField()
 
-
+class Service(models.Model):
+    label = models.TextField()
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+    tax = models.DecimalField(max_digits=5, decimal_places=2)

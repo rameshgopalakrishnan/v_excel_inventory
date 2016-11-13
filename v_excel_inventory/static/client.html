@@ -991,15 +991,23 @@
 	function getTableRow(data) {
 		var id = data.id;
 		var name = data.name;
-		var row = getTableCol(id) + getTableCol(name) + getTableCol(id)
-				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
-				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
+		var address = data.address;
+		var email = data.email;
+		var phone = data.phone_number;
+		var row = getTableCol(id) + getTableCol(name) + getTableCol(address)
+				+ getTableCol(id) + getTableCol(email) + getTableCol(phone)
+				+ getResetPasswdButton() + getTableCol(id) + getTableCol(id)
 				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
 				+ getTableCol(id) + getTableCol(id) + getTableCol(id);
 		return "<tr>" + row + "</tr>";
 	}
 	function getTableCol(data) {
 		return "<td>" + data + "</td>";
+	}
+
+	function getResetPasswdButton(cid){
+		var btn = "<td><button type=\"button\" class=\"btn solso-email solsoShowModal\" data-toggle=\"modal\" data-target=\"#solsoCrudModal\" data-href=\"http://solutiisoft.com/inventory-system/client/6/reset-password\" data-modal-title=\"Reset password\">Reset password</button></td>";
+			return btn;
 	}
 </script>
 </body></html>

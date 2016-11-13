@@ -1,0 +1,31 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+  <body>
+    <h1>Services</h1>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Label</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Tax percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for service in services %}
+        <tr>
+          <td>{{ service.label }}</td>
+          <td>{{ service.workable.label }}</td>
+          <td>{{ service.workable.category }}</td>
+          <td>{{ service.price }}</td>
+          <td>{{ service.tax }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
