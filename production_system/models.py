@@ -11,6 +11,8 @@ class Order(models.Model):
     expected_timestamp = models.DateTimeField()
     completed_timestamp = models.DateTimeField()
 
+    def __str__(self):
+        return "{}. {}: {}".format(self.id, self.customer_id, self.amount)
     # calculate tax in the invoice
 
 
