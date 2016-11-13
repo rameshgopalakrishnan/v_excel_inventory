@@ -11,9 +11,7 @@ class MasterAttribute(models.Model):
     attribute_type = models.IntegerField(choices=TYPE_CHOICES)
 
     class Meta:
-
-        unique_together = (("label", "attribute_type"), )
-
+        unique_together = (("label", "attribute_type"),)
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
@@ -77,3 +75,6 @@ class MappingProductServicesProcess(models.Model):
     process = models.ForeignKey(MasterProcess)
     service = models.ForeignKey(MasterService, null=True)
     product = models.ForeignKey(MasterProduct, null=True)
+
+    def __str__(self):
+        return "{}. {}".format(self.id, self.process.label)

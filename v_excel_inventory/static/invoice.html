@@ -771,7 +771,7 @@
 		
 		/* === CLONE ROW === */
 		$(document).on('click', '#createClone', function(e) {
-			$( '.solsoSelect2.solsoCloneSelect2').select2('destroy');
+			//$( '.solsoSelect2.solsoCloneSelect2').select2('destroy');
 			
 			$( '.solsoParent' )
 				.append( '<tr>' + $( 'tr.solsoChild' ).html()  + '</tr>' );
@@ -784,7 +784,7 @@
 			$("[name='products[]']").last().val('');
 			$("[name='qty[]']").last().val('');
 			$("[name='price[]']").last().val('');
-			$( '.solsoCloneSelect2' ).select2();
+			//$( '.solsoCloneSelect2' ).select2();
 
 			return false;
 		});

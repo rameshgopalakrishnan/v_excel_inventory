@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MasterWorkable, MasterAttribute, MasterService, MasterProduct, MasterProcess
+from .models import MasterWorkable, MasterAttribute, MasterService, MasterProduct, MasterProcess, MappingProductServicesProcess
 
 
 @admin.register(MasterAttribute)
@@ -20,3 +20,7 @@ class MasterProductAdmin(admin.ModelAdmin): pass
 
 @admin.register(MasterProcess)
 class MasterProcessAdmin(admin.ModelAdmin): pass
+
+
+@admin.register(MappingProductServicesProcess)
+class MappingProductServicesProcessAdmin(admin.ModelAdmin): pass

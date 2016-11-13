@@ -3,7 +3,9 @@ from django.db import models
 
 
 class MasterSection(models.Model):
-    label = models.TextField()
+    CHOICE = ((1, 'Laundry'),
+              (2, 'Kitchen'))
+    label = models.IntegerField(choices=CHOICE)
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
@@ -25,6 +27,8 @@ class Customer(models.Model):
     phone_number = models.BigIntegerField()
     email_id = models.EmailField()
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.name)
 class Service(models.Model):
     label = models.TextField()
     price = models.DecimalField(max_digits=7, decimal_places=2)
