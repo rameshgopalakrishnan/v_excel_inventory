@@ -19,7 +19,7 @@ class InternalUser(models.Model):
 class Customer(models.Model):
     name = models.TextField()
     address = models.TextField()
-    phone_number = models.IntegerField()
+    phone_number = models.BigIntegerField()
     email_id = models.EmailField()
 
 
