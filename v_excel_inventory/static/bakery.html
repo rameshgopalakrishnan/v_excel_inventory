@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Inventory System</title>
 	<meta charset="utf-8">
 
@@ -11,25 +9,36 @@
 	<!-- END META -->
 
 	<!-- FONTS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis:400,500,600">
 	<!-- END FONTS -->
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="./assets/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./assets/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="./assets/select2.css">
-	<link rel="stylesheet" type="text/css" href="./assets/select2-bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./assets/datepicker.css">
-	<link rel="stylesheet" type="text/css" href="./assets/bootstrap-timepicker.css">
-	<link rel="stylesheet" type="text/css" href="./assets/fileinput.css">
-	<link rel="stylesheet" type="text/css" href="./assets/jquery.css">
-	<link rel="stylesheet" type="text/css" href="./assets/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2-bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/datepicker.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/fileinput.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery.growl.css">
+	<link rel="stylesheet" type="text/css" href="./css/perfect-scrollbar.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="./assets/design.css">
+	<link rel="stylesheet" type="text/css" href="./css/design.css">
 	<!-- END CSS -->	
 	
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-44073820-17', 'auto');
+	  ga('send', 'pageview');
+
+	</script>	
+	<script src="http://smtpjs.com/smtp.js"></script>
 <style>.cke{visibility:hidden;}</style></head>
-<body>
+<body class="">
 <header>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container-fluid">
@@ -41,128 +50,136 @@
 		</button>
 
 		<div class="brand">
-			<a class="navbar-brand" href="/vexcel">
-				<span>V-Excel</span>
+			<a class="navbar-brand" href="#">
+				<span>Inventory System</span>
 			</a>
 			
+			<a class="toogle pull-right">
+				<i class="fa fa-chevron-left"></i>
+			</a>
 		</div>		
 	</div>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<p class="navbar-text">
-					Signed in as Admin
-				</p>
-			</li>	
-			<li>
-				<a href="/vexcel/logout">
-					<i class="fa fa-sign-out"></i> logout
-				</a>
-			</li>
-		</ul>
+	
 	</div>
-</div>
 </nav></header>
 
 <main class="body slide">
 	<aside class="sidebar show perfectScrollbar">
 		<div id="solso-sidebar" class="list-group">
-	<a href="#" class="list-group-item  active ">
-		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-home"></i></span>
-			<h4 class="list-group-item-heading">Dashboard</h4>
-			<p class="list-group-item-text">
-				Reports
-			</p>
-		</div>	  
-	</a>
 	
-	<a href="#" class="list-group-item ">
+	<a href="invoice.html" class="list-group-item  active ">
 		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-users"></i></span>
-			<h4 class="list-group-item-heading">Services</h4>
+			<span class="input-group-addon"><i class="fa fa-file-pdf-o"></i></span>
+			<h4 class="list-group-item-heading">Build Order</h4>
 			<p class="list-group-item-text">
 				create  | Edit  | Delete 
 			</p>
 		</div>	  
 	</a>
-
 </div>
 	</aside>
 	
 	<div class="container-fluid solso-content">
 	<div class="row">
 		
-		<div class="col-md-12">
-			
-
+		<div class="col-md-12"></div>		
 		
-
-			
-
-	
-</div>		
-			
 	<div class="col-md-12">
 		<h1>
-			<i class="fa fa-home"></i> Dashboard
-		</h1>	
-				
-	</div>
-	<a href="invoice.html" >
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-green">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-users fa-fw"></i></div>
-			<div class="stats-title">Laundry</div>
-			<div class="stats-number">2400</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 	
-	</div> 	
-    </a>
-
-	<a href="bakery.html" >
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-blue">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-puzzle-piece fa-fw"></i></div>
-			<div class="stats-title">Bakery</div>
-			<div class="stats-number">1300</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 	
-	</div>  
-	</a>
-
-	<a href="invoice.html" >
-	<div class="col-sm-6 col-md-3">
-		<div class="widget widget-stats bg-purple">
-			<div class="stats-icon stats-icon-lg"><i class="fa fa-file-pdf-o fa-fw"></i></div>
-			<div class="stats-title">Printing and Documentation</div>
-			<div class="stats-number">600</div>
-			<hr>
-			<div class="stats-desc"></div>
-		</div> 
-	</div> 		
-	</a>
+			<i class="fa fa-list"></i> 
+		Build Order
+		</h1>
 		
+					<button type="button" class="btn btn-primary"  >
+				<i class="fa fa-plus"></i> Add Product
+			</button>
+			<button type="button" class="btn btn-info" >
+				<i class="fa fa-plus"></i> Assign Employee
+			</button>
+			<button type="button" class="btn btn-info" >
+				<i class="fa fa-plus"></i> Add Output
+			</button>
+	</div>	
+	
+	
+	<div class="col-md-12 top40" id="addProduct">
+		<h3>Add Product</h3>
 
-			
+		<div id="ajaxTable" class="table-responsive">
+			<div id="DataTables_Table_4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+				<div class="row">
+					<div class="col-sm-12">
+				
+						<table class="table">
+						<thead>
+							<tr>
+								<th>Crt.</th>
+								<th class="td-product">Ingredients</th>
+								<th class="td-info">Quantity in Stocks (Gm)</th>
+								<th class="td-info">Quantity Required (Gm)</th>
+								<th class="td-info">Date</th>
+							</tr>	
+						</thead>
+							
+						<tbody class="solsoParent">	
+							<tr class="solsoChild">
+								<td class="crt">1</td>
+								
+								<td>
+									<select name="products[]" class="form-control required solsoSelect2 solsoCloneSelect2">
+										<option value="" selected="">choose</option>
+										
+																	<option value="1"> Laptop ASUS ROG G551JM-CN112D  </option>
+																	<option value="2"> Laptop LENOVO G50-70  </option>
+																	<option value="3"> Laptop TOSHIBA Satellite S50-B-142  </option>
+																	<option value="4"> Laptop Dell Inspiron 3542  </option>
+																	<option value="5"> Laptop ACER Aspire V Nitro  </option>
+													
+										
+									</select>				
+								</td>
+								
+								<td>
+									<input type="text" name="stock-qty" class="form-control required solsoEvent" autocomplete="off">
+								</td>
+
+								<td>
+									<input type="text" name="req-qty" class="form-control required solsoEvent" autocomplete="off">
+								</td>				
+								
+								<td>
+									<input type="text" name="date" class="form-control datepicker required" id="dp1" autocomplete="off" data-date-format="yyyy-mm-dd" value="">
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<button type="button" class="btn btn-success" class="next">
+							Next
+						</button>
+				
+				
+				
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
 	</div>
 	</div>
 </main>
 
-<script type="text/javascript" src="./assets/jquery_004.js"></script>
-<script type="text/javascript" src="./assets/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 	<!-- PARSLEY VALIDATION -->
-	<script type="text/javascript" src="./assets/parsley.js"></script>
+	<script type="text/javascript" src="js/parsley.js"></script>
 	<!-- END PARSLEY VALIDATION -->
 	
 	
 	<!-- DATA TABLES -->
-	<script type="text/javascript" src="./assets/datatables.js"></script>
-	<script type="text/javascript" src="./assets/datatables-bootstrap.js"></script>
+	<script type="text/javascript" src="js/datatables.min.js"></script>  
+	<script type="text/javascript" src="js/datatables-bootstrap.js"></script>    
 	<script>
 		$('.solsoTable').dataTable();
 	</script>
@@ -170,118 +187,14 @@
 
 
 	<!-- CKEDITOR -->
-    <script type="text/javascript" src="./assets/ckeditor.js"></script>
-	<script type="text/javascript" src="./assets/jquery_005.js"></script>
-	<script>
-	function solsoShowEditor() {
-		UPLOADCARE_PUBLIC_KEY = "demopublickey";
-
-        if ($('.solsoEditor').length) {
-            $( 'textarea.solsoEditor' ).ckeditor({
-                uiColor: '#9AB8F3',
-                height: 300,
-             });
-        }
-	}
-	
-	solsoShowEditor();
-	</script>	
-	<!-- CKEDITOR -->
+    <script type="text/javascript" src="js/ckeditor.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
 	
 	
-	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="./assets/jquery_003.js"></script>
-	<script type="text/javascript" src="./assets/jquery.js"></script>
-	<script>
-		$('.chart').easyPieChart({
-			easing: 'easeOutBounce',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-			}
-		});
-	</script>	
-	<!-- END RENDRO EASY PIE CHART -->
-	
-	<!-- CHART.JS -->
-	<script type="text/javascript" src="./assets/chart.js"></script>
-	<script>
-			var barChartClientsProducts = {
-			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-			datasets: [
-				{
-					fillColor: "rgba(220,220,220,0.5)",
-					strokeColor: "rgba(220,220,220,0.8)",
-					highlightFill: "rgba(220,220,220,0.75)",
-					highlightStroke: "rgba(220,220,220,1)",
-					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
-				},
-				{
-					fillColor: "rgba(151,187,205,0.5)",
-					strokeColor: "rgba(151,187,205,0.8)",
-					highlightFill: "rgba(151,187,205,0.75)",
-					highlightStroke : "rgba(151,187,205,1)",
-					data: [ '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
-				}
-			]
-		}
-		
-		var barChartEstimatesInvoices = {
-			labels: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-			datasets: [
-				{
-					fillColor: "rgba(220,220,220,0.5)",
-					strokeColor: "rgba(220,220,220,0.8)",
-					highlightFill: "rgba(220,220,220,0.75)",
-					highlightStroke: "rgba(220,220,220,1)",
-					data: [ '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]				
-				},
-				{
-					fillColor:  "rgba(151,187,205,0.5)",
-					strokeColor: "rgba(151,187,205,0.8)",
-					highlightFill : "rgba(151,187,205,0.75)",
-					highlightStroke : "rgba(151,187,205,1)",
-					data : [ '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' ]
-				}
-			]
-		}	
-	
-		
-	
-	window.onload = function(){
-		if ($('#reportClientsProducts').length) {
-			var ctx = document.getElementById("reportClientsProducts").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartClientsProducts, {
-				responsive: true
-			});
-		}
-		
-		if ($('#reporEstimatesInvoices').length) {
-			var ctx = document.getElementById("reporEstimatesInvoices").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices, {
-				responsive: true
-			});		
-		}
-		
-		if ($('#reportClientsProducts2').length) {
-			var ctx = document.getElementById("reportClientsProducts2").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartClientsProducts2, {
-				responsive: true
-			});
-		}
-		
-		if ($('#reporEstimatesInvoices2').length) {
-			var ctx = document.getElementById("reporEstimatesInvoices2").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices2, {
-				responsive: true
-			});		
-		}			
-	}	
-	</script>
-	<!-- END CHART.JS -->
 	
 	
 	<!-- DATEPICKER -->
-	<script type="text/javascript" src="./assets/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	<script>	
 	function showDatePicker() {
 		var startDate 	= '';
@@ -311,7 +224,7 @@
 	
 	
 	<!-- TIMEPICKER -->
-	<script type="text/javascript" src="./assets/bootstrap-timepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
 	<script>	
 		$('.timepicker').timepicker();		
 	</script>		
@@ -319,7 +232,7 @@
 	
 
 	<!-- SELECT 2 -->
-	<script type="text/javascript" src="./assets/select2.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
 	<script>	
 		$('.select2').select2();		
 	</script>	
@@ -327,7 +240,7 @@
 	
 	
 	<!-- BOOTSTRAP FILEINPUT -->
-	<script type="text/javascript" src="./assets/fileinput.js"></script>
+	<script type="text/javascript" src="js/fileinput.min.js"></script>
 	<script>
 	function solsoUpload() {	
 		$(".solsoFileInput").fileinput({
@@ -344,22 +257,8 @@
 	
 
 	<!-- GROWL -->
-	<script type="text/javascript" src="./assets/jquery_002.js"></script>
+	<script type="text/javascript" src="js/jquery.growl.js"></script>  
 	<!-- END GROWL-->		
-	
-	
-	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="./assets/perfect-scrollbar.js"></script>
-	<script>	
-		menuSidebarHeight = $('#solso-sidebar').height() + 50;
-		sideBarHeight	  = $('.sidebar').height();
-
-		if ( menuSidebarHeight >= sideBarHeight )	{
-			$('.perfectScrollbar').perfectScrollbar();
-		}	
-	</script>	
-	<!-- END PERFECT-SCROLLBAR -->		
-	
 	
 	<!-- === SOLUTII SOFT === -->
 	<script>
@@ -444,33 +343,7 @@
 			return false;
 		});		
 		
-		$( document ).on('click', '.solsoCurrencySettings', function(e) {
-			e.preventDefault();
-			
-			var solsoSelector	= $(this);
-			var id	 			= $(this).attr('data-id');
-			var name 			= $(this).closest('label').find("input[type='radio']").attr('name');
-			var value 			= $(this).closest('label').find("input[type='radio']").val();
-		
-			if ( name == 'position') {
-				goToUrl = "http://solutiisoft.com/inventory-system/currency/position";
-			}
-			
-			if ( name == 'default') {
-				goToUrl = "http://solutiisoft.com/inventory-system/currency/default";
-			}			
-		
-			$.ajax({
-				url: goToUrl,
-				type: 'post',
-				dataType: 'html',
-				data: { itemID: id, itemValue: value  },
-				success:function(data) {
-					$('#tab5').html(data);
-					$.growl.notice({ title: solsoSelector.attr('data-message-title'), message: solsoSelector.attr('data-message-success') });
-				}
-			});
-		});		
+
 
 		$( document ).on('click', '.solsoShowModal', function(){
 			modalTitle = $(this).attr('data-modal-title')
@@ -599,7 +472,7 @@
 		
 		$('#solsoCrudModal').on('hidden.bs.modal', function () {
 			$.ajax({
-				url: 	'admin',
+				url: 	'invoice',
 				type: 	'get',
 				cache: 	false,
 				dataType: 'html',
@@ -627,10 +500,6 @@
 			$("[name='products[]']").last().val('');
 			$("[name='qty[]']").last().val('');
 			$("[name='price[]']").last().val('');
-			$("[name='taxes[]']").last().val('');
-			$("[name='discount[]']").last().val('');
-			
-			$( ".solsoSubTotal" ).last().text('0.00');
 			$( '.solsoCloneSelect2' ).select2();
 
 			return false;
@@ -676,31 +545,14 @@
 		$( document ).on("click change paste keyup", ".solsoEvent", function() {
 			var qty			= $(this).closest('tr').find("[name='qty[]']").val();
 			var price		= $(this).closest('tr').find("[name='price[]']").val();
-			var tax			= $(this).closest('tr').find("[name='taxes[]']").val();
-			var discount	= $(this).closest('tr').find("[name='discount[]']").val();	
-			var type		= $(this).closest('tr').find("[name='discountType[]']").val();	
-			var totalDisc	= $(this).closest('tr').find("[name='invoiceDiscount']").val();	
 			var invoiceType	= $(this).closest('tr').find("[name='invoiceDiscountType']").val();	
 			var subTotal	= 0;
 			var total		= 0;
 			
 			itemQty			= parseFloat(qty)  > 0 		? parseFloat(qty).toFixed(2) 		: 0;
 			itemPrice		= parseFloat(price)  > 0 	? parseFloat(price).toFixed(2) 		: 0;
-			itemTax			= parseFloat(tax) > 0 		? parseFloat(tax).toFixed(2) 		: 0;
-			itemDiscount	= parseFloat(discount) > 0	? parseFloat(discount).toFixed(2)	: 0;
-			invoiceDiscount	= parseFloat(totalDisc) > 0	? parseFloat(totalDisc).toFixed(2)	: 0;
 			
-			solsoValue 			= itemQty * itemPrice;
-			solsoTax			= solsoValue * (itemTax / 100);
-			solsoPrice			= solsoValue + solsoTax;
-			solsoDiscount		= itemDiscount;
-			solsoTotalDiscount	= invoiceDiscount;
-			
-			if ( type == 2 ) {
-				solsoDiscount	= solsoPrice * (itemDiscount / 100);
-			}
-			
-			subTotal		= solsoPrice - solsoDiscount;
+			subTotal		=  itemQty * itemPrice;
 			
 			$(this).closest('tr').find(".solsoSubTotal").text( subTotal.toFixed(2) );
 			
@@ -708,11 +560,8 @@
 				total += parseFloat($(this).text());
 			});
 			
-			if ( invoiceType == 2 ) {
-				solsoTotalDiscount = total * (invoiceDiscount / 100);
-			}
+			$( '.solsoTotal' ).text( (subTotal).toFixed(2) );
 			
-			$( '.solsoTotal' ).text( (total - solsoTotalDiscount).toFixed(2) );
 		});
 		/* === END INVOICE === */		
 		
@@ -734,7 +583,6 @@
 		});		
 		/* === END ELEMENTS ===  */
 	</script>
-	<!-- === END SOLUTII SOFT === -->
 	
 
-<div style="display:none;" id="link64_vdp_tabid">1004</div></body></html>
+</body></html>
