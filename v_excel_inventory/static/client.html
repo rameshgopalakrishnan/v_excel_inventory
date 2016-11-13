@@ -729,17 +729,17 @@
 	</script>
 	<!-- === END SOLUTII SOFT === -->
 <script type="text/javascript">
-var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 	
 	
 
 function saveCustomerData() {
+var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 	var data = {
 		"name" : $("#name").val(),
 		"phone_number" : $("#phone").val(),
 		"email_id" : $("#email").val(),
 		"address" : $("#address").val()
-	}
+	};
 	$.ajax({
 		url : customerSaveUrl,
 		type : 'POST',
