@@ -14,8 +14,9 @@ class Order(models.Model):
     def __str__(self):
         return "{}".format(self.id)
     # calculate tax in the invoice
-    def __str__(self):
-        return "{}. {}".format(self.id, self.amount)
+
+    # def __str__(self):
+    #     return "{}. {}".format(self.id, self.amount)
 
 class MasterTag(models.Model):
     CHOICE = ((1, 'In Use'),
