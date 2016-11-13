@@ -41,7 +41,7 @@ class MasterRawMaterial(models.Model):
     unit = models.IntegerField(choices=CHOICES)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.get_label_display())
+        return "{}. {}".format( self.id, self.label)
 
 
 class Inventory(models.Model):
