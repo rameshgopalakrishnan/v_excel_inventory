@@ -7,8 +7,8 @@ class MasterSectionAdmin(admin.ModelAdmin): pass
 
 
 @admin.register(InternalUser)
-class MasterInternalUserAdmin(admin.ModelAdmin): pass
+class InternalUserAdmin(admin.ModelAdmin): pass
 
 
 @admin.register(Customer)
-class MasterCustomerAdmin(admin.ModelAdmin): pass
+class CustomerAdmin(admin.ModelAdmin): pass

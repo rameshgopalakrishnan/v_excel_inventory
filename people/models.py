@@ -3,12 +3,12 @@ from django.db import models
 
 
 class MasterSection(models.Model):
-     CHOICES = ((1, 'Laundry'),
-                (2, 'Kitchen'))
-     label = models.IntegerField(choices=CHOICES)
+    CHOICE = ((1, 'Laundry'),
+              (2, 'Kitchen'))
+    label = models.IntegerField(choices=CHOICE)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.get_label_display())
+        return "{}. {}".format(self.id, self.label)
 
 
 class InternalUser(models.Model):
