@@ -16,6 +16,13 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = '__all__'
 
+class ItemSerializer(serializers.ModelSerializer):
+
+
+
+    class Meta:
+        model = Item
+        fields = '__all__'
 
 class OrderSerializer(serializers.ModelSerializer):
 
@@ -24,12 +31,13 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ItemSerializer(serializers.ModelSerializer):
+class InvoiceSerializer(serializers.ModelSerializer):
+
+    items = ItemSerializer(many = True)
 
     class Meta:
-        model = Item
+        model = Order
         fields = '__all__'
-
 
 class InventorySerializer(serializers.ModelSerializer):
 
@@ -68,3 +76,9 @@ class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model =  MasterTag
         fields = '__all__'
+
+
+# class InvoicesSerializer(serializers.ModelSerializer):
+#         serializer_class =
+#         # read about pagination in order to split this into pages
+#         queryset = Article.objects.all().prefetch_related('locations')[:10]

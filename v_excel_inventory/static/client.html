@@ -745,7 +745,7 @@ var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 		url : customerSaveUrl,
 		type : 'POST',
 		dataType : 'json',
-		data : JSON.stringify(data),
+		data : data,
 		success : function(data) {
 			alert("successfully saved");
 		},failure : function(data) {
@@ -779,7 +779,7 @@ var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 		var id = data.id;
 		var name = data.name;
 		var address = data.address;
-		var email = data.email;
+		var email = data.email_id;
 		var phone = data.phone_number;
 		var row = getTableCol(id) + getTableCol(name) + getTableCol(address)
 				+ getTableCol(id) + getTableCol(email) + getTableCol(phone)
