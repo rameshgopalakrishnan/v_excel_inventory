@@ -20,7 +20,7 @@ from rest_framework import routers
 from people.views import CustomerViewset, InternalUserViewset
 from production_system.views import TaskViewset, OrderViewset, ItemViewset, InventoryViewset, PurchaseViewset, ProductionViewset
 from service_and_process.views import MasterWorkableViewset, MasterProcessViewset, MasterProductViewset, MasterServiceViewset
-from webapp.views import index, CustomerList
+from webapp.views import index, CustomerList, ServicesList
 
 router = routers.DefaultRouter()
 
@@ -48,5 +48,6 @@ urlpatterns = [
     url(r'^index/', index),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^customers_list', CustomerList.as_view())
+    url(r'^customers_list', CustomerList.as_view()),
+    url(r'^services_list', ServicesList.as_view())
 ]
