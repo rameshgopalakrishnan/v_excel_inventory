@@ -70,5 +70,4 @@ class TagViewset(viewsets.ModelViewSet):
 
 class InvoiceViewset(viewsets.ModelViewSet):
     serializer_class = InvoiceSerializer
-    queryset = Order.objects.all().prefetch_related('order_id', 'item_id', 'customer_id', 'service', 'product',
-                                                   'service', 'tag_id', 'expected_timestamp', 'completed_timestamp')
+    queryset = Order.objects.all().prefetch_related('order_id', 'items', 'customer_id', 'tag_id', 'expected_timestamp', 'completed_timestamp')
