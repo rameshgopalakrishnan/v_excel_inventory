@@ -729,7 +729,7 @@
 	</script>
 	<!-- === END SOLUTII SOFT === -->
 <script type="text/javascript">
-var customerListUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
+var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 	
 	
 
@@ -741,7 +741,7 @@ function saveCustomerData() {
 		"address" : $("#address").val()
 	}
 	$.ajax({
-		url : customerListUrl,
+		url : customerSaveUrl,
 		type : 'POST',
 		dataType : 'json',
 		data : JSON.stringify(data),
@@ -755,7 +755,7 @@ function saveCustomerData() {
 }	
 </script>
 <script type="text/javascript">
-	var customerListUrl = "https://v-excel-inventory.herokuapp.com/api/customers";
+	var customerListUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 
 
 	$.ajax({
