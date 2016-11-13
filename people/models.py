@@ -29,7 +29,3 @@ class Customer(models.Model):
 
     def __str__(self):
         return "{}. {}".format(self.id, self.name)
-class Service(models.Model):
-    label = models.TextField()
-    price = models.DecimalField(max_digits=7, decimal_places=2)
-    tax = models.DecimalField(max_digits=5, decimal_places=2)
