@@ -77,16 +77,6 @@
 			</p>
 		</div>	  
 	</a>
-	
-	<a href="client.html" class="list-group-item">
-		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-users"></i></span>
-			<h4 class="list-group-item-heading">Clients</h4>
-			<p class="list-group-item-text">
-				create  | Edit  | Delete 
-			</p>
-		</div>	  
-	</a>
 </div>
 	</aside>
 	
@@ -98,278 +88,83 @@
 	<div class="col-md-12">
 		<h1>
 			<i class="fa fa-list"></i> 
-		Invoices
+		Build Order
 		</h1>
 		
-					<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="invoiceCreate.html" data-modal-title="Create new invoice">
-				<i class="fa fa-plus"></i> Create new invoice
+					<button type="button" class="btn btn-primary"  >
+				<i class="fa fa-plus"></i> Add Product
 			</button>
-			</div>	
-
-	<div class="col-md-12 top40">
-		<h3>Invoices</h3>
+			<button type="button" class="btn btn-info" >
+				<i class="fa fa-plus"></i> Assign Employee
+			</button>
+			<button type="button" class="btn btn-info" >
+				<i class="fa fa-plus"></i> Add Output
+			</button>
+	</div>	
+	
+	
+	<div class="col-md-12 top40" id="addProduct">
+		<h3>Add Product</h3>
 
 		<div id="ajaxTable" class="table-responsive">
 			<div id="DataTables_Table_4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-				<div class="row"><div class="col-sm-12">
-				<table class="table solsoTable dataTable no-footer" data-alert="1" id="DataTables_Table_4" role="grid" aria-describedby="DataTables_Table_4_info">
-	<thead>
-		<tr role="row">
-			<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Crt.: activate to sort column descending" style="width: 28px;">Crt.</th>
-			<th class="col-md-1 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Invoice: activate to sort column ascending" style="width: 67px;">Invoice</th>
-			<th class="col-md-2 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 107px;">Customer</th>
-			<th class="col-md-2 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 107px;">Product</th>
-			<th class="col-md-2 sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 107px;">Quantity</th>
-			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 70px;">Amount</th>
-			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="paid: activate to sort column ascending" style="width: 55px;">paid</th>
-			<th class="col-md-1 text-right sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Balance: activate to sort column ascending" style="width: 72px;">Balance</th>
-			<th class="col-md-1 text-center sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Due date: activate to sort column ascending" style="width: 57px;">Due date</th>
-			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 60px;">Status</th>
-			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 46px;">State</th>
-			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 74px;">Action</th>
-			<th class="small sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84px;">Action</th></tr>
-	</thead>
-
-	<tbody>
-			
-		
-		
-	<tr role="row" class="odd">
-			<td class="sorting_1">
-				1
-			</td>
-
-			<td>
-				1
-			</td>
-
-			<td>
-									Baane Mini Imports
-					
-			</td>	
-			<td>
-				Shirt
-			</td>
-
-			<td>5</td>
-
-			<td class="text-right">
-				 110.00
-			</td>	
-			
-			<td class="text-right">
-				 0.00
-			</td>						
-			
-			<td class="text-right">
+				<div class="row">
+					<div class="col-sm-12">
 				
-				
-									- 110
+						<table class="table">
+						<thead>
+							<tr>
+								<th>Crt.</th>
+								<th class="td-product">Ingredients</th>
+								<th class="td-info">Quantity in Stocks (Gm)</th>
+								<th class="td-info">Quantity Required (Gm)</th>
+								<th class="td-info">Date</th>
+							</tr>	
+						</thead>
+							
+						<tbody class="solsoParent">	
+							<tr class="solsoChild">
+								<td class="crt">1</td>
 								
+								<td>
+									<select name="products[]" class="form-control required solsoSelect2 solsoCloneSelect2">
+										<option value="" selected="">choose</option>
+										
+																	<option value="1"> Laptop ASUS ROG G551JM-CN112D  </option>
+																	<option value="2"> Laptop LENOVO G50-70  </option>
+																	<option value="3"> Laptop TOSHIBA Satellite S50-B-142  </option>
+																	<option value="4"> Laptop Dell Inspiron 3542  </option>
+																	<option value="5"> Laptop ACER Aspire V Nitro  </option>
+													
+										
+									</select>				
+								</td>
+								
+								<td>
+									<input type="text" name="stock-qty" class="form-control required solsoEvent" autocomplete="off">
+								</td>
+
+								<td>
+									<input type="text" name="req-qty" class="form-control required solsoEvent" autocomplete="off">
+								</td>				
+								
+								<td>
+									<input type="text" name="date" class="form-control datepicker required" id="dp1" autocomplete="off" data-date-format="yyyy-mm-dd" value="">
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<button type="button" class="btn btn-success" class="next">
+							Next
+						</button>
 				
-			</td>			
-			
-			<td class="text-center">
-				2016-02-19
-			</td>	
-
-			<td>
-				<label class="label label-unpaid">
-					unpaid
-				</label>
-			</td>						
-			
-			<td>
-									<label class="label label-paid">seen</label>
-							</td>			
-							<td>		
-					<button type="button" class="btn btn-primary solsoShowModal" data-toggle="modal" data-target="#solsoCrudModal" data-href="http://solutiisoft.com/inventory-system/invoice/1/edit" data-modal-title="Show invoice">
-						<i class="fa fa-edit"></i> Edit
-					</button>
-				</td>
-
-				<td>		
-					<button type="button" class="btn btn-danger solsoConfirm" data-toggle="modal" data-target="#solsoDeleteModal" data-href="http://solutiisoft.com/inventory-system/invoice/1">
-						<i class="fa fa-trash"></i> Delete
-					</button>		
-				</td>
-			
-		</tr></tbody>
-</table></div></div>
-</div>	</div>	
-	</div>
-	
-	
-		
-		<div class="modal fade" id="solsoCrudModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-<div class="modal-dialog modal-lg">
-	<div class="modal-content">
-		<div class="modal-header">
-			<h4 class="solsoModalTitle">Create new invoice</h4>
-		</div>
-		
-		<div class="modal-body">
-			<div class="row solsoShowForm"><form method="POST" action="http://solutiisoft.com/inventory-system/invoice" accept-charset="UTF-8" role="form" class="solsoForm"><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
-
-	<div class="form-group col-md-12">
-		<label for="client_id">
-		Client</label>
-		<select name="client_id" class="form-control required solsoSelect2">
-			<option value="" selected="">choose</option>
-			
-							<option value="1"> Baane Mini Imports </option>
-							<option value="2"> American Souvenirs Inc </option>
-							<option value="3"> Vitachrome Inc. </option>
-							<option value="4"> Toys of Finland, Co. </option>
-							<option value="5"> AV Stores, Co. </option>
-						
-			
-		</select>
-		
+				
+				
+					</div>
+				</div>
 			</div>
-	
-	<div class="form-group col-md-3">
-		<label for="number">Invoice number</label>
-		<div class="input-group">
-			<span class="input-group-addon solso-pre">DEMO</span>
-			<input type="text" name="number" class="form-control required no-line" autocomplete="off" value="2">
-		</div>
-		
-			</div>		
-
-	<div class="form-group col-md-3">
-		<div class="form-group">
-			<label for="start_date">Start date</label>
-			<input type="text" name="start_date" class="form-control datepicker required" id="dp1" autocomplete="off" data-date-format="yyyy-mm-dd" value="">
-
-					</div>
+		</div>	
 	</div>
-
-	<div class="form-group col-md-3">
-		<div class="form-group">
-			<label for="due_date">Due date</label>
-			<input type="text" name="due_date" class="form-control datepicker required" id="dp2" autocomplete="off" data-date-format="yyyy-mm-dd" value="">
-
-					</div>
-	</div>			
-			
-	<div class="clearfix"></div>	
-	
-	<div class="table-responsive col-md-12">
-		<table class="table">
-		<thead>
-			<tr>
-				<th>Crt.</th>
-				<th class="td-product">Product</th>
-				<th class="td-info">Price</th>
-				<th class="td-info">Quantity</th>
-				<th class="td-info">Total Price</th>
-				<th class="delete-button">Action</th>
-			</tr>	
-		</thead>
-			
-		<tbody class="solsoParent">	
-			<tr class="solsoChild">
-				<td class="crt">1</td>
-				
-				<td>
-					<select name="products[]" class="form-control required solsoSelect2 solsoCloneSelect2">
-						<option value="" selected="">choose</option>
-						
-													<option value="1"> Laptop ASUS ROG G551JM-CN112D  </option>
-													<option value="2"> Laptop LENOVO G50-70  </option>
-													<option value="3"> Laptop TOSHIBA Satellite S50-B-142  </option>
-													<option value="4"> Laptop Dell Inspiron 3542  </option>
-													<option value="5"> Laptop ACER Aspire V Nitro  </option>
-									
-						
-					</select>				
-				</td>
-				
-				<td>
-					<input type="text" name="price[]" class="form-control required solsoEvent" autocomplete="off">
-				</td>
-
-				<td>
-					<input type="text" name="qty[]" class="form-control required solsoEvent" autocomplete="off">
-				</td>				
-				
-				<td>
-					<h4 class="pull-right">
-						<span class="solsoSubTotal">0.00</span>
-					</h4>	
-				</td>
-
-				<td>
-					<button type="button" class="btn btn-danger disabled removeClone">
-						<i class="fa fa-minus"></i>
-					</button>
-				</td>					
-			</tr>
-		</tbody>
-		</table>
-	</div>		
-	
-	<div class="form-group top20 text-center">
-		<button type="button" class="btn btn-primary btn-lg" id="createClone"><i class="fa fa-plus"></i> Add new product</button>
-	</div>	
-
-	<div class="form-group col-md-12">
-		<label for="description"> Description </label>
-		<textarea name="description" class="form-control" rows="7" autocomplete="off"></textarea>
-	</div>	
-
-	<div class="form-group col-md-12">
-		<label for="terms"> Terms &amp; Conditions </label>
-		<textarea name="terms" class="form-control" rows="7" autocomplete="off"></textarea>
-	</div>	
-		
-	<div class="form-group col-md-12">
-		<button type="button" class="btn btn-success solsoSave" data-message-title="Create notification" data-message-error="Validation error messages" data-message-success="Data was saved">
-			<i class="fa fa-save"></i> Save
-		</button>
-	</div>
-		
-</form></div>
-		</div>
-		
-		<div class="modal-footer">
-			<button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-		</div>
-	</div>
-</div>
-</div>
-
-		<div class="modal fade" id="solsoDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Delete dialog</h4>
-        </div>
-
-        <div class="modal-body">
-            <p>You are about to delete this item this procedure is irreversible !</p>
-            <p>Do you want to proceed ?</p><p>
-        </p></div>
-
-        <div class="modal-footer">
-
-			<form method="POST" action="http://solutiisoft.com/inventory-system/invoice" accept-charset="UTF-8" id="solsoFormDelete"><input name="_token" type="hidden" value="to0LUe9kzLwOyZM63z1v71FRIKDs7PIk3KHGeKjH">
-				
-				<button type="button" class="btn btn-primary" data-dismiss="modal">
-					NO
-				</button>
-				
-				<button class="btn btn-danger solsoDelete" data-message-title="Delete notification" data-message-success="Data was deleted">
-					YES
-				</button>
-					
-			</form>									
-
-        </div>
-    </div>
-</div>
-</div>		
 	</div>
 	</div>
 </main>
@@ -394,73 +189,8 @@
 	<!-- CKEDITOR -->
     <script type="text/javascript" src="js/ckeditor.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script>
-	function solsoShowEditor() {
-		UPLOADCARE_PUBLIC_KEY = "demopublickey";
-
-        if ($('.solsoEditor').length) {
-            $( 'textarea.solsoEditor' ).ckeditor({
-                uiColor: '#9AB8F3',
-                height: 300,
-             });
-        }
-	}
-	
-	solsoShowEditor();
-	</script>	
-	<!-- CKEDITOR -->
 	
 	
-	<!-- RENDRO EASY PIE CHART -->
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
-	<script>
-		$('.chart').easyPieChart({
-			easing: 'easeOutBounce',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-			}
-		});
-	</script>	
-	<!-- END RENDRO EASY PIE CHART -->
-	
-	<!-- CHART.JS -->
-	<script type="text/javascript" src="js/chart.min.js"></script>
-	<script>
-	
-		
-	
-	window.onload = function(){
-		if ($('#reportClientsProducts').length) {
-			var ctx = document.getElementById("reportClientsProducts").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartClientsProducts, {
-				responsive: true
-			});
-		}
-		
-		if ($('#reporEstimatesInvoices').length) {
-			var ctx = document.getElementById("reporEstimatesInvoices").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices, {
-				responsive: true
-			});		
-		}
-		
-		if ($('#reportClientsProducts2').length) {
-			var ctx = document.getElementById("reportClientsProducts2").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartClientsProducts2, {
-				responsive: true
-			});
-		}
-		
-		if ($('#reporEstimatesInvoices2').length) {
-			var ctx = document.getElementById("reporEstimatesInvoices2").getContext("2d");
-			window.myBar = new Chart(ctx).Bar(barChartEstimatesInvoices2, {
-				responsive: true
-			});		
-		}			
-	}	
-	</script>
-	<!-- END CHART.JS -->
 	
 	
 	<!-- DATEPICKER -->
@@ -529,20 +259,6 @@
 	<!-- GROWL -->
 	<script type="text/javascript" src="js/jquery.growl.js"></script>  
 	<!-- END GROWL-->		
-	
-	
-	<!-- PERFECT-SCROLLBAR -->	
-	<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
-	<script>	
-		menuSidebarHeight = $('#solso-sidebar').height() + 50;
-		sideBarHeight	  = $('.sidebar').height();
-
-		if ( menuSidebarHeight >= sideBarHeight )	{
-			$('.perfectScrollbar').perfectScrollbar();
-		}	
-	</script>	
-	<!-- END PERFECT-SCROLLBAR -->		
-	
 	
 	<!-- === SOLUTII SOFT === -->
 	<script>
