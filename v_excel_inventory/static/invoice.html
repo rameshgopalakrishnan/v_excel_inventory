@@ -866,6 +866,79 @@
 		   }
 		});		
 		/* === END ELEMENTS ===  */
+<script type="text/javascript">
+	//var invoiceListUrl = "https://v-excel-inventory.herokuapp.com/api/invoice";
+	var invoiceListUrl = "invoicelist.json"
+
+	$.ajax({
+		url : invoiceListUrl,
+		type : 'get',
+		dataType : 'json',
+		success : function(data) {
+			populateInvoiceTable(data);
+		}
+	});
+	function populateInvoiceTable(data) {
+		var tableId = "DataTables_Table_4";
+		var rows = "";
+		for (var i = 0; i < data.length; i++) {
+			rows += getTableRow(data[i]);
+		}
+		$("#" + tableId).append(rows);
+	}
+	function getTableRow(data) {
+		var id = data.id;
+		var customerName = data.customer;
+		var product = data.product;
+		var quantity = data.quantity;
+		var amount = data.amount;
+		var paid = data.paid;
+		var dueDate = data.dueDate;
+		var status = data.status;
+		var state = data.state;
+		
+		var row = getTableCol(id) + getTableCol(customerName) + getTableCol(product)
+				+ getTableCol(quantity) + getTableCol(amount) + getTableCol(paid) + getTableCol(dueDate) + getTableCol(status) + getTableCol(state) +  
+				+ showInvoiceButton() ;
+		return "<tr>" + row + "</tr>";
+	}
+	function getTableCol(data) {
+		return "<td>" + data + "</td>";
+	}
+
+
+	function showInvoiceButton(cid){
+		var btn = "<td><button type=\"button\" class=\"btn btn-primary solsoShowModal\" data-toggle=\"modal\" data-target=\"#solsoCrudModal\" data-href=\"http://solutiisoft.com/inventory-system/invoice/1/edit\" data-modal-title=\"Show invoice\">Show invoice</button></td>";
+			return btn;
+	}
+
+	</script>
+
+	<script type="text/javascript">
+	
+    $(document).on('click', '#createClone', function(e) {
+      $( '.solsoSelect2.solsoCloneSelect2').select2('destroy');
+      
+      $( '.solsoParent' )
+        .append( '<tr>' + $( 'tr.solsoChild' ).html() + '</tr>' );
+    
+      $( '.crt' ).each(function( index ) {
+        $( this ).text(index+1);
+      }); 
+      
+      
+      $("[name='products[]']").last().val('');
+      $("[name='qty[]']").last().val('');
+      $("[name='price[]']").last().val('');
+      $("[name='taxes[]']").last().val('');
+      $("[name='discount[]']").last().val('');
+      
+      $( ".solsoSubTotal" ).last().text('0.00');
+      $( '.solsoCloneSelect2' ).select2();
+
+      return false;
+    });
+
 	</script>
 	
 
