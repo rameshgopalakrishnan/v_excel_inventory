@@ -95,8 +95,17 @@ class Production(models.Model):
     # batch
 
 
+class ProductInventory(models.Model):
+    """Holds the current state of the product (cookies, chocolates) Inventory"""
+    product = models.ForeignKey(MasterProduct)
+    quantity = models.IntegerField()
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
+    update_timestamp = models.DateTimeField()
+
+
 class MappingTrainerTraineeTask(models.Model):
 
     task_id = models.ForeignKey('production_system.Task')
     trainer = models.ForeignKey(InternalUser, related_name='trainer')
     trainee = models.ForeignKey(InternalUser, related_name='trainee')
+
