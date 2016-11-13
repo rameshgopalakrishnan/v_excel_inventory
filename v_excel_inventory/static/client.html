@@ -740,6 +740,7 @@ var customerSaveUrl = "https://v-excel-inventory.herokuapp.com/api/customers/";
 		"email_id" : $("#email").val(),
 		"address" : $("#address").val()
 	};
+	console.log(data);
 	$.ajax({
 		url : customerSaveUrl,
 		type : 'POST',
