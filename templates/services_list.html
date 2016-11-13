@@ -9,7 +9,8 @@
       <thead>
         <tr>
           <th>Name</th>
-
+          <th>Label</th>
+          <th>Category</th>
           <th>Price</th>
           <th>Tax percentage</th>
         </tr>
@@ -18,7 +19,8 @@
         {% for service in services %}
         <tr>
           <td>{{ service.label }}</td>
-
+          <td>{{ service.workable.label }}</td>
+          <td>{{ service.workable.category }}</td>
           <td>{{ service.price }}</td>
           <td>{{ service.tax }}</td>
         </tr>
