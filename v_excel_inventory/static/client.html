@@ -969,5 +969,37 @@
 	</script>
 	<!-- === END SOLUTII SOFT === -->
 	
+<script type="text/javascript">
+	var customerListUrl = "api/customers";
 
+	$.ajax({
+		url : customerListUrl,
+		type : 'get',
+		dataType : 'json',
+		success : function(data) {
+			populateCustomerTable(data);
+		}
+	});
+	function populateCustomerTable(data) {
+		var tableId = "ajaxTable";
+		var rows = "";
+		for (var i = 0; i < data.length; i++) {
+			rows += getTableRow(data[i]);
+		}
+		$("#" + tableId).append(rows);
+	}
+	function getTableRow(data) {
+		var id = data.id;
+		var name = data.name;
+		var row = getTableCol(id) + getTableCol(name) + getTableCol(id)
+				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
+				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
+				+ getTableCol(id) + getTableCol(id) + getTableCol(id)
+				+ getTableCol(id) + getTableCol(id) + getTableCol(id);
+		return "<tr>" + row + "</tr>";
+	}
+	function getTableCol(data) {
+		return "<td>" + data + "</td>";
+	}
+</script>
 </body></html>
