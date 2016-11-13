@@ -39,6 +39,7 @@ class InvoiceSerializer(serializers.ModelSerializer):
         model = Order
         fields = '__all__'
 
+
 class InventorySerializer(serializers.ModelSerializer):
 
     class Meta:

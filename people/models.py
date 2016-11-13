@@ -3,9 +3,7 @@ from django.db import models
 
 
 class MasterSection(models.Model):
-    CHOICE = ((1, 'Laundry'),
-              (2, 'Kitchen'))
-    label = models.IntegerField(choices=CHOICE)
+    label = models.TextField(unique=True)
 
     def __str__(self):
         return "{}. {}".format(self.id, self.label)
