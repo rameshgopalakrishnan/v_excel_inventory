@@ -3,10 +3,12 @@ from django.db import models
 
 
 class MasterSection(models.Model):
-    label = models.TextField()
+     CHOICES = ((1, 'Laundry'),
+                (2, 'Kitchen'))
+     label = models.IntegerField(choices=CHOICES)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.label)
+        return "{}. {}".format(self.id, self.get_label_display())
 
 
 class InternalUser(models.Model):
@@ -25,4 +27,5 @@ class Customer(models.Model):
     phone_number = models.BigIntegerField()
     email_id = models.EmailField()
 
-
+    def __str__(self):
+        return "{}. {}".format(self.id, self.name)
