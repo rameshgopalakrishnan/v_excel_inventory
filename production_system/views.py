@@ -21,9 +21,11 @@ from production_system.serializers import ProductionSerializer
 from production_system.serializers import ProductInventorySerializer
 from production_system.serializers import RawMaterialSerializer
 from production_system.serializers import TagSerializer
+from production_system.serializers import InvoiceSerializer
 
 
 class TaskViewset(viewsets.ModelViewSet):
+
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
@@ -64,3 +66,9 @@ class RawMaterialViewset(viewsets.ModelViewSet):
 class TagViewset(viewsets.ModelViewSet):
     queryset = MasterTag.objects.all()
     serializer_class = TagSerializer
+
+
+class InvoiceViewset(viewsets.ModelViewSet):
+    serializer_class = InvoiceSerializer
+    queryset = Order.objects.all().prefetch_related('order_id', 'item_id', 'customer_id', 'service', 'product',
+                                                   'service', 'tag_id', 'expected_timestamp', 'completed_timestamp')

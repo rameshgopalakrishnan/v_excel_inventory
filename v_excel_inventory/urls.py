@@ -18,7 +18,8 @@ from django.contrib import admin
 from rest_framework import routers
 
 from people.views import CustomerViewset, InternalUserViewset
-from production_system.views import TaskViewset, OrderViewset, ItemViewset, InventoryViewset, PurchaseViewset, ProductionViewset, ProductInventoryViewset, RawMaterialViewset, TagViewset
+from production_system.views import TaskViewset, OrderViewset, ItemViewset, InventoryViewset, PurchaseViewset, \
+    ProductionViewset, ProductInventoryViewset, RawMaterialViewset, TagViewset, InvoiceViewset
 from service_and_process.views import MasterWorkableViewset, MasterProcessViewset, MasterProductViewset, MasterServiceViewset
 from webapp.views import index, CustomerList, ServicesList
 
@@ -39,6 +40,7 @@ router.register(r'production', ProductionViewset)
 router.register(r'product_inventory', ProductInventoryViewset)
 router.register(r'material', RawMaterialViewset)
 router.register(r'tags', TagViewset)
+router.register(r'invoice', InvoiceViewset)
 
 api_urls = [
     url(r'^', include(router.urls))
