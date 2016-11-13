@@ -17,10 +17,10 @@ class Order(models.Model):
 class MasterTag(models.Model):
     CHOICE = ((1, 'In Use'),
               (2, 'Free'))
-    status = models.IntegerField(CHOICE)
+    status = models.IntegerField(choices=CHOICE)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.status)
+        return "{}. {}".format(self.id, self.get_status_display())
 
 
 class Item(models.Model):
@@ -38,10 +38,10 @@ class MasterRawMaterial(models.Model):
                (2, 'kg'))
 
     label = models.TextField()
-    unit = models.IntegerField(CHOICES)
+    unit = models.IntegerField(choices=CHOICES)
 
     def __str__(self):
-        return "{}. {}".format(self.id, self.label)
+        return "{}. {}".format(self.id, self.get_label_display())
 
 
 class Inventory(models.Model):
@@ -91,8 +91,16 @@ class Production(models.Model):
     entry_timestamp = models.DateTimeField(auto_now_add=True)
     expected_quantity = models.IntegerField()
     output_quantity = models.IntegerField(null=True)
-    type = models.IntegerField(choices=PRODUCTION_CHOICE)
+    production_type = models.IntegerField(choices=PRODUCTION_CHOICE)
     # batch
+
+
+class ProductInventory(models.Model):
+    """Holds the current state of the product (cookies, chocolates) Inventory"""
+    product = models.ForeignKey(MasterProduct)
+    quantity = models.IntegerField()
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
+    update_timestamp = models.DateTimeField()
 
 
 class MappingTrainerTraineeTask(models.Model):
@@ -100,3 +108,4 @@ class MappingTrainerTraineeTask(models.Model):
     task_id = models.ForeignKey('production_system.Task')
     trainer = models.ForeignKey(InternalUser, related_name='trainer')
     trainee = models.ForeignKey(InternalUser, related_name='trainee')
+

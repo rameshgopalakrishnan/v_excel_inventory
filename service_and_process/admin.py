@@ -1,5 +1,5 @@
 from django.contrib import admin
-from service_and_process.models import MasterWorkable, MasterAttribute, MasterService, MasterProduct, MasterProcess
+from .models import MasterWorkable, MasterAttribute, MasterService, MasterProduct, MasterProcess
 
 
 @admin.register(MasterAttribute)
